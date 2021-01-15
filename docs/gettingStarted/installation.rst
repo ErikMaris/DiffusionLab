@@ -3,7 +3,7 @@ Installation
 
 DiffusionLab is available as MATLAB App, which is shipped as MATLAB App Installer (.mlappinstall). The App can be installed in MATLAB by clicking :guilabel:`Install App` in the APP tab. After installation, the App is available in the App toolstrip under 'MY APPS'.
 
-MATLAB’s ‘Curve Fitting Toolbox’ and ‘Image Processing Toolbox’ need to be installed to use all DiffusionLab's features. Type $ver$ in the MATLAB Command Window and press enter to check which toolboxes are installed. To install the missing toolboxes, go to the ‘Home’ ribbon tab -> Add-Ons -> Get Add-Ons and search for the ‘Curve Fitting Toolbox’ and ‘Image Processing Toolbox’ to install them. 
+MATLAB’s `Curve Fitting Toolbox <https://en.mathworks.com/products/curvefitting.html>`_ and `Image Processing Toolbox <https://en.mathworks.com/products/image.html>`_ need to be installed to use all DiffusionLab's features. Type *ver* in the MATLAB Command Window and press enter to check which toolboxes are installed. To install the missing toolboxes, go to the ‘Home’ ribbon tab > :guilabel:`Add-Ons` > :guilabel:`Get Add-Ons` and search for the ‘Curve Fitting Toolbox’ and ‘Image Processing Toolbox’ to install them. 
 
 Software has been written and tested in MATLAB 2019b.
 
