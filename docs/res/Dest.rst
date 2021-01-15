@@ -49,7 +49,7 @@ MSD_confined
 Model for trapping in domains. Fits the fit range of the MSD :math:`<r^2>` with [#f4]_ 
 
 .. math::
-	<r^2> = <r^2>_0 \left[ 1 - \exp(-t/\tau) \right[
+	<r^2> = <r^2>_0 \left[ 1 - \exp(-t/\tau) \right]
 
 * :math:`<r^2>_0`: squared confinement length
 * :math:`t`: delay time
