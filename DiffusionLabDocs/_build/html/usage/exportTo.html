@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Export for DiffusionLab &mdash; DiffusionLab  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DiffusionLab GUI" href="GUI.html" />
+    <link rel="prev" title="Workflow" href="../gettingStarted/workflow.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DiffusionLab
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.99
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../gettingStarted/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingStarted/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingStarted/workflow.html">Workflow</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Export for DiffusionLab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dom-v-1-1-6">DoM v.1.1.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#localizer-for-igor-pro">Localizer for Igor Pro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comsol">COMSOL</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="GUI.html">DiffusionLab GUI</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../res/trackProperties.html">Track Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../res/Dest.html">Diffusion estimators</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../zreferences.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DiffusionLab</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Export for DiffusionLab</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/usage/exportTo.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="export-for-diffusionlab">
+<h1>Export for DiffusionLab<a class="headerlink" href="#export-for-diffusionlab" title="Permalink to this headline">¶</a></h1>
+<p>DiffusionLab supports the import of tracks from DoM v.1.1.6 and Localizer for Igor Pro. Support requests for formats can be sent to the developers.</p>
+<div class="section" id="dom-v-1-1-6">
+<h2>DoM v.1.1.6<a class="headerlink" href="#dom-v-1-1-6" title="Permalink to this headline">¶</a></h2>
+<p>DoM is an ImageJ plugin for localization and tracking of single-molecule fluorescence time lapse movies. The software is freely available <a class="reference external" href="https://github.com/ekatrukha/DoM_Utrecht/wiki">here</a>. The results can be exported via the ImageJ “Results” table. The steps are the following:</p>
+<ol class="arabic simple">
+<li><p>Open your movie in ImageJ</p></li>
+<li><p>Analyze &gt; DoM v.1.1.6 &gt; Detect molecules and perform “Detect molecules and fit” with the optimized settings for your system. Use a “fitting iterations number” of 5</p></li>
+<li><p>Analyze &gt; DoM v.1.1.6 &gt; Link Particles to Tracks</p></li>
+<li><p>Go to the “Results” table and go to File &gt; Save As and save the table as .csv file</p></li>
+</ol>
+<p>Macros are available in the group for batch localization and linking into tracks.</p>
+</div>
+<div class="section" id="localizer-for-igor-pro">
+<h2>Localizer for Igor Pro<a class="headerlink" href="#localizer-for-igor-pro" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://doi.org/10.1117/1.JBO.17.12.126008">Localizer</a> is a plugin for Igor Pro for localization and tracking of single-molecule fluorescence time lapse movies. The software is freely <a class="reference external" href="https://bitbucket.org/pdedecker/localizer/src/master/">available here</a>. Tracks can be computed and exported following:</p>
+<ol class="arabic simple">
+<li><p>Localizer &gt; Read CCD data &gt; Read CCD data from disk…</p></li>
+<li><p>Press &gt;&gt; on the movie viewer and perform Localization and Tracking</p></li>
+<li><p>Localizer &gt; Manipulate Particle Tracks &gt; Save tracks to text file…</p></li>
+</ol>
+<p>Supported Localization algorithms are:</p>
+<ul class="simple">
+<li><p>Gaussian fitting</p></li>
+<li><p>Gaussian fitting (fixed width)</p></li>
+<li><p>Ellipsoidal Gaussian fitting</p></li>
+<li><p>MLEwG</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The localization algorithm is recognized by the number of columns in the output file. If this changes, the columns are interpreted incorrectly.</p>
+</div>
+</div>
+<div class="section" id="comsol">
+<h2>COMSOL<a class="headerlink" href="#comsol" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.comsol.nl/">COMSOL</a> is a commercial software packing for multiphysics modelling and allows single-particle trajectory simulation. For this, the <a class="reference external" href="https://www.comsol.nl/particle-tracing-module">Particle tracing module</a> should be installed. Tracks can be exported follwing:</p>
+<ol class="arabic simple">
+<li><p>To do!</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>COMSOL exports the coordinates in three dimensions. The functionality of DiffusionLab for 3D trajectories is limited and some track properties are only computed in the XY-plane. A warning in the MATLAB log window appears when this occurs, and explains which track properties have been affected.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="GUI.html" class="btn btn-neutral float-right" title="DiffusionLab GUI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../gettingStarted/workflow.html" class="btn btn-neutral float-left" title="Workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, J.J. Erik Maris
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DiffusionLab GUI &mdash; DiffusionLab  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Track Properties" href="../res/trackProperties.html" />
+    <link rel="prev" title="Export for DiffusionLab" href="exportTo.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> DiffusionLab
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.99
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../gettingStarted/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingStarted/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingStarted/workflow.html">Workflow</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="exportTo.html">Export for DiffusionLab</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DiffusionLab GUI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import-save-tracks">Import &amp; Save Tracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#segmentation">Segmentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#property-table">Property table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manual-segmentation">Manual Segmentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#segmentation-using-machine-learning">Segmentation Using Machine Learning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#visualization">Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#display-units">Display units</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#motion-estimation">Motion Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#save-export-results">Save &amp; Export Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugging">Debugging</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../res/trackProperties.html">Track Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../res/Dest.html">Diffusion estimators</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../zreferences.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DiffusionLab</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>DiffusionLab GUI</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/usage/GUI.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="diffusionlab-gui">
+<h1>DiffusionLab GUI<a class="headerlink" href="#diffusionlab-gui" title="Permalink to this headline">¶</a></h1>
+<p>Assuming that DiffusionLab has been installed, the graphical user interface (GUI) can be found and opened in the APP toolstrip under ‘MY APPS’. The GUI of DiffusionLab is given in <a class="reference internal" href="#fig-gui-main"><span class="std std-numref">Figure  1</span></a>. The options will be discussed in the following sections.</p>
+<div class="figure align-default" id="id4">
+<span id="fig-gui-main"></span><img alt="../_images/GUI_main.png" src="../_images/GUI_main.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Overview of the graphical user interface (GUI) of DiffusionLab</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="import-save-tracks">
+<h2>Import &amp; Save Tracks<a class="headerlink" href="#import-save-tracks" title="Permalink to this headline">¶</a></h2>
+<p>Tracks can be imported from DoM results tables, Localizer text files, and COMSOL text files with the options in the menu <span class="guilabel">File</span> &gt; <span class="guilabel">Import tracks</span>. Loading of large files can take while; DiffusionLab will output the path of the loaded file followed by ‘done’ in the Command Window.</p>
+<p>In order to do quantitative (motion) analysis of the trajectories, the track settings have to be set in the <cite>Compute properties</cite> panel. The <span class="guilabel">Pixel size</span> is the length of a single pixel edge in nanometers, the <span class="guilabel">Frame time</span> the time between frames in seconds, and <span class="guilabel">Exposure time</span> is the time the shutter is open per frame in seconds. This assumes that the time in raw data is given in frames and the coordinates in pixels. If not, these values should be considered as a conversion factor from the unit in the raw data to the unit given in the GUI (see Hint). The <span class="guilabel">Exposure time</span> is only used to compute the motion blur constant in the diffusion constant estimators following the Berglund camera-based single-particle tracking model <a class="bibtex reference internal" href="../zreferences.html#berglund2010statistics" id="id1">[1]</a>. It can be set to zero to not include motion blur in the analysis.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If the coordinates in the raw data are given in micrometers, the <span class="guilabel">Pixel size</span> is 1000 (nanometer/micrometer). This situation often occurs when working with simulated tracks, e.g. from COMSOL.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The pixel size, frame time, and exposure time can be changed anytime, and all new figures are plotted with the new values.</p>
+</div>
+<p>The current DiffusionLab session can be saved and restored via <span class="guilabel">File</span> &gt; <span class="guilabel">Load</span> / <span class="guilabel">Save</span>. The saved file has an extension <a href="#id2"><span class="problematic" id="id3">*</span></a>.mat.</p>
+</div>
+<div class="section" id="segmentation">
+<h2>Segmentation<a class="headerlink" href="#segmentation" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="../res/trackProperties.html#ch-trackproperties-standard"><span class="std std-ref">standard track properties</span></a> of the loaded tracks are computed with <span class="guilabel">Compute track properties</span>. Additionally, the mean squared displacement (MSD) values are computed for plotting and fitting.</p>
+<p>The Population is a group of tracks with – preferably – similar diffusion characteristics. Populations can be managed in the <cite>Segmentation</cite> panel. The current Population can be selected in the first dropdown menu <span class="guilabel">Population #</span> in the <cite>Selection</cite> panel. Each Population has a number of Tracks, which can be selected based on the Track ID in the second dropdown menu <span class="guilabel">Track #</span>. The computed track properties can be selected in the bottom two menu’s, which are respectively the <span class="guilabel">Track property 1</span> and <span class="guilabel">Track property 2</span>.</p>
+<div class="section" id="property-table">
+<h3>Property table<a class="headerlink" href="#property-table" title="Permalink to this headline">¶</a></h3>
+<p>The properties of the individual tracks are displayed in the track table. The population and track property of interest can be set using <span class="guilabel">Population #</span> and <span class="guilabel">Track property 1</span>, respectively. All tracks within a population have a unique track ID, which can be used to find the track back in the <span class="guilabel">Plot tracks</span> using the <span class="guilabel">Label</span> option. The tracks are sorted from low to high value of their current property. Invalid values are indicated by NaN.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The track IDs change when tracks are added or removed from a population and do not remain the constant throughout the analysis.</p>
+</div>
+</div>
+<div class="section" id="manual-segmentation">
+<h3>Manual Segmentation<a class="headerlink" href="#manual-segmentation" title="Permalink to this headline">¶</a></h3>
+<p>Segmentation is performed on the current <span class="guilabel">Population #</span> with the <span class="guilabel">Track property 1</span>. The threshold value is given in the field <span class="guilabel">Property threshold</span> and must be a scalar numeric value. The filter is selected via <span class="guilabel">Use property 1 as filter</span>, but not directly applied. The settings during the filter selection are saved and the filter has to be reapplied when the user wishes to change <span class="guilabel">Population #</span> or <span class="guilabel">Track property 1</span>. The tracks and MSD can be plotted with <span class="guilabel">Preview all filtered tracks</span> and <span class="guilabel">Preview all filtered MSDs</span> and the filter can be applied with <span class="guilabel">Apply filter to all tracks</span> or deleted with <span class="guilabel">Reset filter</span>. The <span class="guilabel">Delete current population</span> button deletes the currently selected population and cannot be reversed. The currently selected <span class="guilabel">Population #</span> can be merged using <span class="guilabel">Delete current population</span> with the population number in the dropdown menu next to the button. This resets the diffusion constant estimator and the motion analysis settings will be lost. The result of the all segmentation steps can be displayed as decision tree with the <span class="guilabel">Plot decision tree</span> button.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Selection of a filter via <span class="guilabel">Use property 1 as filter</span> allows the user to preview filtered tracks and their mean squared displacements. This allows manual tweaking of the <span class="guilabel">Property threshold</span>. The application of the filter to the current population is done via the <span class="guilabel">Apply filter to all tracks</span> button.</p>
+</div>
+</div>
+<div class="section" id="segmentation-using-machine-learning">
+<h3>Segmentation Using Machine Learning<a class="headerlink" href="#segmentation-using-machine-learning" title="Permalink to this headline">¶</a></h3>
+<p>The trajectories can be segmented with a classification tree or other supervised machine learning tools available in MATLAB. DiffusionLab comes with an additional tool that allows the user to create a training set for supervised machine learning. This tool <em>Classification Trainer (for DiffusionLab)</em> allows rapid manual classification of trajectories in up to five user-defined categories, and is shown in <a class="reference internal" href="#fig-gui-classification"><span class="std std-numref">Figure  2</span></a>. It can be opened via <span class="guilabel">Classification</span> &gt; <span class="guilabel">Classification Trainer</span> in the DiffusionLab main window. The training set can be used to train a classification tree or be imported into MATLAB’s <a class="reference external" href="https://nl.mathworks.com/help/stats/classificationlearner-app.html">Classification Learner app</a>.</p>
+<div class="figure align-default" id="id5">
+<span id="fig-gui-classification"></span><img alt="../_images/GUI_classification.png" src="../_images/GUI_classification.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Overview of the graphical user interface (GUI) for classification.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>The current population that is open in DiffusionLab when opening Classification Trainer is loaded and made available for classification in Classification Trainer. A new training set is started by pressing <span class="guilabel">New training set</span> or saved training set can be loaded directly via <span class="guilabel">Load training set</span> in the <cite>General</cite> panel. Up to five categories can be added via <span class="guilabel">Add category</span> and deleted likewise with <span class="guilabel">Delete category</span>. Deletion of a category results in the permanent deletion of the tracks from the training set. The categories can be named with <span class="guilabel">Rename category</span> and these names are stored in the population and used as label in the decision tree when displayed using <span class="guilabel">Plot decision tree</span> in the DiffusionLab main window.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The training set is saved in SI units and is thus compatible regardless the pixel size and frame time of processed data sets. This means that the pixel size and frame time cannot be changed after the classified tracks have been added to the training set.</p>
+</div>
+<p>Training is done in batches. The number of tracks per batch is given in the field <span class="guilabel">No. tracks to classify</span> and the minimum number of track points in the batch is given in the field <span class="guilabel">Minimum track points</span> in the <cite>Training</cite> panel. The progress of the training is followed in the text field in the <cite>Training</cite> panel. Preliminary cancellation with <span class="guilabel">Cancel training</span> results in no tracks from that batch being added to the training set. During training, user is shown a plot of a trajectory and asked to classify this track into one of the created categories. The red dot is the minimum bounding circle center and the green dot the center of mass of the track. The scale of the plot can be set <span class="guilabel">Auto</span> for auto scale or a manual <span class="guilabel">Plot range (m)</span> can be given in meters. Assignment of a track into a category can be done by clicking the respective button or via the hotkeys marked below. The last assignment can be redone by pressing <span class="guilabel">Go back</span> and allows the user to revisit the classification of the last track.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>To create a training set with tracks from multiple data sets, one can save the training set and open it when a different data set is loaded from DiffusionLab. The trained tracks from the new data set will be appended to the loaded training set.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If the hotkeys do not respond, please click next to plot window.</p>
+</div>
+<p>A decision tree can be trained from the currently loaded training set in the panel <cite>Segmentation tree</cite>. The tree is computed with <span class="guilabel">Compute tree</span> and the mximum number of splits allowed in the decision tree is set in the field <span class="guilabel">Max. number of splits</span>. The tree is displayed in the log window and plotted after computation or via the button <span class="guilabel">View tree</span>. The tree uses all <a class="reference internal" href="../res/trackProperties.html#ch-trackproperties-standard"><span class="std std-ref">standard track properties</span></a> for training. The currently opened population in DiffusionLab can be segmented with this tree using <span class="guilabel">Segment DiffusionLab</span>. This action will close the Classification Trainer and open DiffusionLab with the segmentation executed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The splits of the classication tree are not included in the decision tree available in the DiffusionLab main window <span class="guilabel">Plot decision tree</span>. Please save the decision tree before proceeding with <span class="guilabel">Segment DiffusionLab</span>.</p>
+</div>
+<p>The classification and track properties of the tracks in the training set can be exported for MATLAB’s  Classification Learner app via <span class="guilabel">Export for Classification Learner</span>. The Classification Learner app can be opened with <span class="guilabel">MATLAB Classification Learner</span>. Here, also a subset of track properties can be selected for classification and the full toolbox of supervised machine learning in MATLAB can be used including:</p>
+<ul class="simple">
+<li><p>Decision trees</p></li>
+<li><p>Discriminant analysis</p></li>
+<li><p>Naive Bayes classifiers</p></li>
+<li><p>Support vector machines</p></li>
+<li><p>Nearest neighbor classifiers</p></li>
+<li><p>Ensemble classifiers</p></li>
+</ul>
+<p>Classification Learner can also be opened from the DiffusionLab main window via <span class="guilabel">Classification</span> &gt; <span class="guilabel">MATLAB Classification Learner</span>. The trained model in Classification Learner can be <a class="reference external" href="https://nl.mathworks.com/help/stats/export-classification-model-for-use-with-new-data.html">exported</a> via <span class="guilabel">export model</span> or <span class="guilabel">export compact model</span>. The current population in DiffusionLab can be segmented with this save model via <span class="guilabel">Classification</span> &gt; <span class="guilabel">Segment with model CL</span>.</p>
+</div>
+</div>
+<div class="section" id="visualization">
+<h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h2>
+<p>The tracks and their properties can be plotted in the <cite>Plot properties</cite> menu. The <span class="guilabel">Line thickness</span> and <span class="guilabel">Colormap</span> can be set for all plots. The currently selected <span class="guilabel">Track #</span> and its properties can be plotted with <span class="guilabel">Plot selected track</span> and its mean squared displacement curve with <span class="guilabel">Plot selected MSD</span>.</p>
+<p>When the checkbox <span class="guilabel">Plot for all populations (opts below)</span> is selected, all populations are plotted in a single figure, while when the checkbox is unselected only the current <span class="guilabel">Population #</span> is plotted. <span class="guilabel">Plot tracks</span> displays the coordinates of all tracks and the <span class="guilabel">Label</span> check box toggles the Track IDs of the last plot. This functionality remains after plotting and can be used to correlate the track’s coordinate to its properties. <span class="guilabel">Plot MSD</span> shows the mean squared displacement curves of population(s). <span class="guilabel">Box plot of 1st property</span> plots a box plot of the current <span class="guilabel">First property</span> with the central mark indicating the mean, the box top and bottom edges the 25th and 75th percentiles, respectively, and the whiskers the most extreme data points that are not considered outliers. Outliers are indicated with plus symbols. <span class="guilabel">Histogram of 1st property</span> plots a histogram of the <span class="guilabel">First property</span> with counts or probability selected with the <span class="guilabel">Probability</span> checkbox and linear or logarithmic binning toggled by the <span class="guilabel">Logarithmic binning</span> checkbox. <span class="guilabel">Plot squared displacement</span> is a special case of the histogram plot and and uses the same (<span class="guilabel">Probability</span> and  <span class="guilabel">Logarithmic binning</span>) checkboxes. It plots the squared displacement after a set <span class="guilabel">Delay index:</span> in the number of frames, which should be an integer. The <span class="guilabel">Spatial map of the 1st property</span> plots a Voronoi diagram of the track’s center of mass coordinates. The tracks at the edges are enclosed by a convex hull. If the spatial map is plotted for a single population, the color of the Voronoi cells represents the value if the <span class="guilabel">First property</span>. The <span class="guilabel">No edges</span> checkbox toggles whether the edges of the Voronoi cells are plotted and the <span class="guilabel">No centers of mass</span> checkbox toggles whether the centers of mass are plotted. <span class="guilabel">Plot track</span> property correlation plots the correlation between the <span class="guilabel">First property</span> and <span class="guilabel">Second property</span>. Diffusion estimator specific plots generates a popup menu in which a plot can be selected. The menu is only available when a diffusion estimator has been computed. These plots might use the current <span class="guilabel">Track #</span>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The <span class="guilabel">Delay index</span> can be set as an individual number (e.g. 2), as a vector of individual numbers (e.g. 2,4,5,9), or as a vector with a regular interval (e.g. 1:5 = 1,2,3,4,5 and 1:2:9 = 1,3,5,7,9) following MATLAB’s syntax.</p>
+</div>
+<div class="section" id="display-units">
+<h3>Display units<a class="headerlink" href="#display-units" title="Permalink to this headline">¶</a></h3>
+<p>The units used to display and export properties and motion analysis are dependent on the length and time scale of the trajectories. Therefore, the display units can be set manually in <span class="guilabel">View</span> &gt; <span class="guilabel">Units</span>. Default units are SI units. Like the pixel size, frame time, and exposure time, these changes have direct effect on the track table and on all newly plotted figures.</p>
+</div>
+</div>
+<div class="section" id="motion-estimation">
+<h2>Motion Estimation<a class="headerlink" href="#motion-estimation" title="Permalink to this headline">¶</a></h2>
+<p>The diffusion constant can be computed per track, population or both, depending on the selected estimator in the dropdown meanu <span class="guilabel">No diffusion estimator</span>. The diffusion model is selected in the dropdown menu <span class="guilabel">Select diffusion model</span>, which is automatically updated with the available models for the current diffusion estimator. <span class="guilabel">Diffusion estimator options</span> button gives a pop-up menu in which the settings for diffusion estimation can be tailored. For additional information on the required input, type “doc Dest” in the MATLAB Command Window and select the diffusion estimator for more information. <span class="guilabel">Set current estimator to all populations</span> sets the current estimator and its settings to all populations. <span class="guilabel">Compute diffusion</span> computes the diffusion constant per track, population or both depending on the diffusion estimator. The <span class="guilabel">all pop.</span> checkbox allows the user to compute the diffusion for all populations. Fit results for individual tracks are added to the track properties and fit results of the population can be displayed using <span class="guilabel">Report diffusion population</span>. Plots that are only available for a specific diffusion estimator can be displayed via <span class="guilabel">Diffusion-estimator specific plots</span>. Some plots display results per track and the current track <span class="guilabel">Track #</span> is taken for the plot. Details of the diffusion estimators can be found in <a class="reference internal" href="../res/Dest.html#ch-diffusionestimators"><span class="std std-ref">diffusion estimators</span></a>.</p>
+</div>
+<div class="section" id="save-export-results">
+<h2>Save &amp; Export Results<a class="headerlink" href="#save-export-results" title="Permalink to this headline">¶</a></h2>
+<p>A DiffusionLab session can be saved as MATLAB-file by clicking the <span class="guilabel">File</span> &gt; <span class="guilabel">Save</span> button. The contents of the Track table can be copied to the clipboard by pressing <span class="guilabel">Copy table to clipboard</span>. This allows the user to easily transfer the computed track properties to other plotting software. All track properties can be exported via <span class="guilabel">File</span> &gt; <span class="guilabel">Export</span> &gt; <span class="guilabel">Properties to table</span> and saved in various formats. The tracks can be exported to the MATLAB workspace for scripting (not documented) via <span class="guilabel">File</span> &gt; <span class="guilabel">Export</span> &gt; <span class="guilabel">Tracks to workspace</span>.</p>
+<p>All open figures apart from DiffusionLab, that is also other figures and GUI’s unrelated to DiffusionLab, will be closed via <span class="guilabel">File</span> &gt; <span class="guilabel">Close all open figures</span>.</p>
+<p>The plots can be saved in a wide range of pixel and vector images via <span class="guilabel">File</span> &gt; <span class="guilabel">Export</span> &gt; <span class="guilabel">Figure</span> using the GUI in <a class="reference internal" href="#fig-gui-figures"><span class="std std-numref">Figure  3</span></a>. The extension can be selected and the default is svg. The width <span class="guilabel">W</span> and height <span class="guilabel">H</span> of the saved figure can be selected in the desired units, default is centimeters. A name for the project can be set in the <span class="guilabel">Project name</span> field or the title, which is set as a prefix to the save name. The title of the figure is taken when the checkbox <span class="guilabel">Append figure title</span> is selected, otherwise only the project name is taken. The title is not saved in the figure itself. Saved figures are not overwritten and number is used as suffix to the save name. <span class="guilabel">Export all open figures</span> saves all open figures apart from DiffusionLab, that is also other figures and GUI’s unrelated to DiffusionLab, with the specified settings. <span class="guilabel">Export current open figure</span> saves the last selected figure.</p>
+<div class="figure align-default" id="id6">
+<span id="fig-gui-figures"></span><img alt="../_images/GUI_figures.png" src="../_images/GUI_figures.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Overview of the graphical user interface (GUI) for figure export.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="debugging">
+<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
+<p>For troubleshooting, debug mode can be toggled on in <span class="guilabel">Help</span> &gt; <span class="guilabel">Debug</span>, which provides extensive error messages and the lines of the where the error occurs. During normal usage, this box should be toggled off. When reporting errors, always make sure the error message with debug mode on is provided.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../res/trackProperties.html" class="btn btn-neutral float-right" title="Track Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="exportTo.html" class="btn btn-neutral float-left" title="Export for DiffusionLab" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, J.J. Erik Maris
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
