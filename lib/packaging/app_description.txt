@@ -1,0 +1,9 @@
+DiffusionLab
+
+J.J. Erik Maris & F. Meirer
+
+j.j.e.maris@uu.nl
+
+Utrecht University
+
+Software package for single-fluorophore trajectory analysis

@@ -1,0 +1,298 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration file="C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\GUI\DiffusionLab_App.prj" location="C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\GUI" name="DiffusionLab_App" target="target.mlapps" target-name="Package App">
+    <param.appname>DiffusionLab_App</param.appname>
+    <param.authnamewatermark />
+    <param.email />
+    <param.company />
+    <param.icon />
+    <param.icons />
+    <param.summary />
+    <param.description />
+    <param.screenshot>C:\Users\3971627\AppData\Local\Temp\tp7d435203_c6cd_445f_94c6_ca65c68ce844.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name>
+      <item>MATLAB</item>
+      <item>Curve Fitting Toolbox</item>
+    </param.products.name>
+    <param.products.id>
+      <item>1</item>
+      <item>60</item>
+    </param.products.id>
+    <param.products.version>
+      <item>9.7</item>
+      <item>3.5.10</item>
+    </param.products.version>
+    <param.platforms>
+      <item>win64</item>
+    </param.platforms>
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>26dffc2e-cae0-41db-a8cc-028201e0ea62</param.guid>
+    <unset>
+      <param.authnamewatermark />
+      <param.email />
+      <param.company />
+      <param.icon />
+      <param.icons />
+      <param.summary />
+      <param.description />
+      <param.version />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\DiffusionLab_App.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@classHandling\classHandling.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@plotting\plotting.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@segTree\segTree.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\addTrack.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\computeBlinking.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\computeCenter.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\computeDiffusion.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\computeDrift.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\computeEntropy.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\computeIntTraceFromMovie.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\computeMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\computeOnTrace.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\computePCA.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\computeVoronoi.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\errorShade.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\getAllDelays.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\getCommonTimes.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\getD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\getDestNames.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\getdR2.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\getHullPoints.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\getLocalizations.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\getLocErrFromImmobile.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\getLocVar.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\getMeanMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\getTrackOverlap.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\importDoM.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\importLocalizer.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\importTrackpy.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\importTrackStruct.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\merge.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\minboundcircle.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\plotBoxProp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\plotDisplacements.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\plotdR2.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\plotdR2CPD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\plotHistProp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\plotMeanMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\plotMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\plotPropCorrelation.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\plotTracks.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\plotVoronoiDiag.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\reportDest.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\segment.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@tracks\tracks.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\@unitProps\unitProps.m</file>
+      <file>${PROJECT_ROOT}\ClassifierTrainer.fig</file>
+      <file>${PROJECT_ROOT}\ClassifierTrainer.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\third_party\Localizer (for Matlab)\Localizer.mexw64</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@blinking\blinking.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@blinking\computeTraceBlinkingGap.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@blinking\getOnOffFromOnTraceShort.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@blinking\getOnTraceFromShort.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@blinking\getShortFromOnTrace.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@blinking\plotDistOnOff.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@blinking\plotEventsHist.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@blinking\plotEventsTime.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@blinking\plotIntTrace.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@blinking\plotNewTracksHist.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@blinking\plotNewTracksTime.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@blinking\plotOnTrace.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@blinking\thresholdIntTrace.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@localizations\dtdrCorrPlot.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@localizations\getTracks.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@localizations\hungarianlinker.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@localizations\importDoM.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@localizations\localizations.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@localizations\munkres.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@localizations\nearestneighborlinker.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@localizations\plotLocalizations.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@localizations\simpletracker.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@localizations\trackCrockerGrier.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\classes\@localizations\trackingWoll2013.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\shared\functions\checkParameter.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\shared\functions\colormap\cmapMCEC.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\shared\functions\simulations\getOnTraceFromShort.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_non_essential\shared\functions\simulations\getShortFromOnTrace.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\+Dest\DestModel.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\computeBlinking.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\computeCenter.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\computeDiffusion.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\computeDrift.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\computeEntropy.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\computeIntTraceFromMovie.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\computeMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\computeOnTrace.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\computeOnTraceC.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\computePCA.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\computeVoronoi.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\errorShade.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\getAllDelays.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\getCommonTimes.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\getD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\getDestNames.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\getHullPoints.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\getLocalizations.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\getLocVar.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\getMeanMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\getSqDisp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\getTrackOverlap.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\importDoM.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\importLocalizer.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\importTrackStruct.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\minboundcircle.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\plotBoxProp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\plotDisplacements.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\plotEventsInTime.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\plotHistProp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\plotMeanMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\plotMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\plotPropCorrelation.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\plotSqDisp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\plotTrackAndProperties.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\plotTracks.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\plotVoronoiDiag.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\segment.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\classes\@tracks\tracks.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\superclasses\@classHandling\classHandling.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\superclasses\@plotting\plotting.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190816_DiffusionLab\objects\superclasses\@unitProps\unitProps.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\computeBlinking.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\computeCenter.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\computeDiffusion.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\computeDrift.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\computeEntropy.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\computeIntTraceFromMovie.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\computeMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\computeOnTrace.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\computeOnTraceC.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\computePCA.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\computeVoronoi.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\errorShade.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\getAllDelays.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\getCommonTimes.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\getD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\getDestNames.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\getHullPoints.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\getLocalizations.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\getLocErrFromImmobile.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\getLocVar.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\getMeanMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\getSqDisp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\getTrackOverlap.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\importDoM.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\importLocalizer.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\importTrackpy.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\importTrackStruct.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\minboundcircle.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\plotBoxProp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\plotDisplacements.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\plotEventsInTime.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\plotHistProp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\plotMeanMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\plotMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\plotPropCorrelation.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\plotSqDisp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\plotTrackAndProperties.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\plotTracks.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\plotVoronoiDiag.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\segment.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\classes\@tracks\tracks.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\superclasses\@classHandling\classHandling.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\superclasses\@plotting\plotting.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20190906_DiffusionLab\objects\superclasses\@unitProps\unitProps.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@segTree\segTree.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\computeBlinking.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\computeCenter.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\computeDiffusion.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\computeDrift.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\computeEntropy.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\computeIntTraceFromMovie.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\computeMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\computeOnTrace.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\computePCA.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\computeVoronoi.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\errorShade.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\getAllDelays.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\getCommonTimes.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\getD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\getDestNames.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\getHullPoints.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\getLocalizations.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\getLocErrFromImmobile.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\getLocVar.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\getMeanMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\getSqDisp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\getTrackOverlap.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\importDoM.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\importLocalizer.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\importTrackpy.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\importTrackStruct.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\merge.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\minboundcircle.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\plotBoxProp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\plotDisplacements.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\plotHistProp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\plotMeanMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\plotMSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\plotPropCorrelation.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\plotSqDisp.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\plotTracks.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\plotVoronoiDiag.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\reportDest.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\segment.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\classes\@tracks\tracks.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\superclasses\@classHandling\classHandling.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\superclasses\@plotting\plotting.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\releases\20191101_DiffusionLab\classes\superclasses\@unitProps\unitProps.m</file>
+    </fileset.depfun>
+    <fileset.resources>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\+Dest\CPD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\+Dest\CPD_LSE_1normal.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\+Dest\CPD_LSE_2normal.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\+Dest\DEstimator.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\+Dest\DModel.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\+Dest\fminsearchbnd.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\+Dest\MSD.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\+Dest\MSD_confined.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\+Dest\MSD_directed.m</file>
+      <file>C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\classes\+Dest\MSD_normal.m</file>
+    </fileset.resources>
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential" name="GUI" optional="false">C:\Users\3971627\surfdrive\software\MATLAB track analysis_OOP\code_essential\GUI</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2019b</root>
+      <toolboxes>
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
