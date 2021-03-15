@@ -46,7 +46,7 @@ for ii = 1:nObj
     std_out = msd_out; % same headers
     
     [~,time_unit] = obj(ii).getUnitFactor('dt'); % get time unit name
-    [uF_MSD,msd_unit] = obj(ii).getUnitFactor('pixelsize');
+    [uF_MSD,msd_unit] = obj(ii).getUnitFactor('pixelsize.^2');
     for jj = 1:obj(ii).nTracks
         [~, idx_allDelays, ~] = intersect(allDelays, obj(ii).MSD{jj}(:,1));
         msd_out(idx_allDelays+1,jj+1) = obj(ii).MSD{jj}(:,2).*uF_MSD; % +1 because we skip the header line
