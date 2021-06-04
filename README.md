@@ -3,6 +3,19 @@ Software package for single-fluorophore trajectory analysis
 
 Link to documentation: https://diffusionlab.readthedocs.io/en/latest/
 
+## Requirements
+
+This code was written and tested in MATLAB 2019b.
+
+(At least) the following MATLAB toolboxes must be installed:
+- Curve Fitting Toolbox
+- Image Fitting Toolbox
+
+When running from the command line, please make sure that the following repositories have been donwloaded:
+- printFig (https://github.com/ErikMaris/printFig)
+- plotProps (https://github.com/ErikMaris/plotProps)
+- unitProps (https://github.com/ErikMaris/unitProps)
+
 
 ## Project organization
 - PG = project-generated
