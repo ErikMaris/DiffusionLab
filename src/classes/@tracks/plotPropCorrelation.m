@@ -66,7 +66,7 @@ if nargin < 5
 end
 
 nObj = numel(obj);
-hps  = nan(nObj,1);
+hps  = gobjects(nObj,1);
 
 for ii = 1:nObj
 
