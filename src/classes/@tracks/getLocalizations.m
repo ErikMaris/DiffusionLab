@@ -72,7 +72,7 @@ for ii = 1:nii
     
     % --- assign to localization object
 
-    obj_loc(ii)  = localizations(time,coords,obj(ii).getUnitFactor('m'),obj(ii).getUnitFactor('s'));
+    obj_loc(ii)  = localizations(time,coords,obj(ii).getUnitFactor('pixelsize'),obj(ii).getUnitFactor('dt'));
     
 end
 
