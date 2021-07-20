@@ -32,8 +32,6 @@ function msmsd = getMeanMSD(obj, indices)
 % -                         HISTORY                           -
 % -------------------------------------------------------------
 % 
-% Reproduced from msdanalyzer https://tinevez.github.io/msdanalyzer/
-% (C) 2014 Jean-Yves Tinevez
 % 
 % -------------------------------------------------------------
 % Copyright (C) 2021 J.J. Erik Maris
