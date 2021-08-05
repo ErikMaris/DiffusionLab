@@ -5,12 +5,12 @@ Diffusion estimators
 
 In this resource section, the available diffusion estimators are documented.
 
-The motion blur coefficient :math:`R` is computed following equation S9 in Lindén et al. [#f1]_ . A continuous exposure at the beginning of each frame is assumed.
+The motion blur coefficient :math:`R` is computed following equation S9 in Lindén et al. [#f1]_. A continuous exposure at the beginning of each frame is assumed.
 
 MSD
 ++++
 
-Mean-squared displacement (MSD) analysis is performed both on the individual tracks MSD as the population MSD. As the number of displacements contributing to the mean decreases at longer delay times and the bias increases, it is recommended to not fit the full MSD curve. The fit range can be set in the :guilabel:`Diffusion estimator options` menu.
+Mean-squared displacement (MSD) analysis is performed both on the individual tracks (time averaged MSD) as the population (time–ensemble averaged MSD). As the number of displacements contributing to the mean decreases at longer delay times and the bias increases, it is recommended to not fit the full MSD curve. The fit range can be set in the :guilabel:`Diffusion estimator options` menu.
 
 * **Clipping factor**: maximum fraction of the total number of delay times, when value < 1 or the number of delay times included in the fit when value > 1. Please note that a delay time of zero is excluded from the fit.
 * **Minimum points taken for fit**: minimum number of delay times taken for fit regardless of the clipping factor.
@@ -75,10 +75,10 @@ Model for normal Brownian motion in a flow. Fits the fit range of the MSD :math:
 
 The :math:`D`, :math:`\sigma^2`, :math:`v`, and :math:`\textrm{SNR}` are added as track properties.
 
-.. rubric:: References
+.. rubric:: References (in footnotes)
 
-.. [#f1] Lindén, M. and Elf, J., 2018. Variational algorithms for analyzing noisy multistate diffusion trajectories. Biophysical journal, 115(2), pp.276-282.
-.. [#f2] Michalet, X. and Berglund, A.J., 2012. Optimal diffusion coefficient estimation in single-particle tracking. Physical Review E, 85(6), p.061916.
-.. [#f3] Vestergaard, C.L., Blainey, P.C. and Flyvbjerg, H., 2014. Optimal estimation of diffusion coefficients from single-particle trajectories. Physical Review E, 89(2), p.022726.
-.. [#f4] Qian, H., Sheetz, M.P. and Elson, E.L., 1991. Single particle tracking. Analysis of diffusion and flow in two-dimensional systems. Biophysical journal, 60(4), pp.910-921.
+.. [#f1] Lindén, M. and Elf, J., 2018. Variational algorithms for analyzing noisy multistate diffusion trajectories. Biophysical journal, 115, pp.276-282.
+.. [#f2] Michalet, X. and Berglund, A.J., 2012. Optimal diffusion coefficient estimation in single-particle tracking. Physical Review E, 85, p.061916.
+.. [#f3] Vestergaard, C.L., Blainey, P.C. and Flyvbjerg, H., 2014. Optimal estimation of diffusion coefficients from single-particle trajectories. Physical Review E, 89, p.022726.
+.. [#f4] Qian, H., Sheetz, M.P. and Elson, E.L., 1991. Single particle tracking. Analysis of diffusion and flow in two-dimensional systems. Biophysical journal, 60, pp.910-921.
 .. [#f5] Saxton, M.J., 2007. Modeling 2D and 3D diffusion. In Methods in membrane lipids (pp. 295-321). Humana Press.

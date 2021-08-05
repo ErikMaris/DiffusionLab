@@ -3,7 +3,7 @@ Workflow
 
 The suggested workflow is the following:
 
-1. Localization, tracking, and export in DoM or Localizer
+1. Localization, tracking, and export in DoM, Localizer, or COMSOL Multiphysics
 2. Import in DiffusionLab
 3. Compute track properties
 4. Plot track(s) and/or properties and identify desired populations

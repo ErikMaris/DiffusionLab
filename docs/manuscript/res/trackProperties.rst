@@ -3,10 +3,10 @@
 Track Properties
 =================
 
-Track properties are features that describe an aspect of a track. This can relate to for instance the shape or number of points. In DiffusionLab, these track properties are used to segment the tracks into smaller populations with similar motion behavior.
+Track properties are features that describe a property of a trajectory. This can relate to e.g. the shape of the trajectory or number of points. In DiffusionLab, these track properties are used to segment the tracks into smaller populations with similar motion behavior.
 
 .. note::
-	A good set of track properties for segmentation describe features that are different between the intended populations. DiffusionLab provides a large selection of track properties, and depending on the intended populations the best subset of track properties can differ between data sets.
+	A good set of track properties for segmentation describes properties that are different between the intended populations. DiffusionLab provides a large selection of track properties, and depending on the intended populations the best subset of track properties can differ between data sets.
 
 
 .. _ch-trackProperties-standard:
@@ -60,7 +60,7 @@ MBC minus CoM
 
 **Physical interpretation:** 
 
-* Evenness spatial distribution localizations. It gives an indication of how homogeneously points are distributed spatially.
+* Evenness spatial distribution localizations. It gives an indication of how homogeneously points are spatially distributed.
 
 **Units:** -.
 
@@ -68,7 +68,7 @@ MBC minus CoM
 Entropy
 ++++++++++++++++++++++
 
-**Description:** Shannon’s entropy of the distribution of the localization coordinates within the enclosing square that is defined by two times ``MinBoundCircleRadius``. [#f1]_
+**Description:** Shannon’s entropy of the distribution of the localization coordinates within the enclosing square that is defined by two times ``MinBoundCircleRadius``. [#f2]_
 
 **Physical interpretation:** 
 
@@ -134,7 +134,7 @@ Localization error
 Diffusion SNR
 ++++++++++++++++++++++
 
-**Description:** signal-to-noise (SNR) of the displacements as given in Vestergaard et al. [#f2]_
+**Description:** signal-to-noise (SNR) of the displacements as given in Vestergaard et al. [#f3]_
 
 **Physical interpretation:** 
 
@@ -163,7 +163,8 @@ The standard track properties categorized by their main descriptors are given in
    * - Uniformity spatial distribution
      - Minimum bounding circle radius, MBCC minus CoM, entropy
 	 
-.. rubric:: References
+.. rubric:: References (in footnotes)
 
-.. [#f1] Hendriks, F.C., Meirer, F., Kubarev, A.V., Ristanović, Z., Roeffaers, M.B., Vogt, E.T., Bruijnincx, P.C. and Weckhuysen, B.M., 2017. Single-molecule fluorescence microscopy reveals local diffusion coefficients in the pore network of an individual catalyst particle. Journal of the American Chemical Society, 139(39), pp.13632-13635.
-.. [#f2] Vestergaard, C.L., Blainey, P.C. and Flyvbjerg, H., 2014. Optimal estimation of diffusion coefficients from single-particle trajectories. Physical Review E, 89(2), p.022726.
+.. [#f1] Hendriks, F.C., Meirer, F., Kubarev, A.V., Ristanović, Z., Roeffaers, M.B., Vogt, E.T., Bruijnincx, P.C. and Weckhuysen, B.M., 2017. Single-molecule fluorescence microscopy reveals local diffusion coefficients in the pore network of an individual catalyst particle. Journal of the American Chemical Society, 139, pp.13632-13635.
+.. [f#2] Same as ref. 1.
+.. [#f3] Vestergaard, C.L., Blainey, P.C. and Flyvbjerg, H., 2014. Optimal estimation of diffusion coefficients from single-particle trajectories. Physical Review E, 89, p.022726.

@@ -1,7 +1,7 @@
 DiffusionLab GUI
 =================
 
-Assuming that DiffusionLab has been installed, the graphical user interface (GUI) can be found and opened in the APP toolstrip under 'MY APPS'. The GUI of DiffusionLab is given in :numref:`Figure  %s <fig-GUI_main>`. The options will be discussed in the following sections.
+Assuming that DiffusionLab has been installed, the graphical user interface (GUI) can be found and opened in the APP toolstrip under 'MY APPS'. The GUI of DiffusionLab is given in :numref:`Figure  %s <fig-GUI_main>`. The options will be discussed in the sections below.
 
 .. _fig-GUI_main:
 
@@ -13,7 +13,7 @@ Assuming that DiffusionLab has been installed, the graphical user interface (GUI
 Import & Save Tracks
 -----------------------
 
-Tracks can be imported from DoM results tables, Localizer text files, and COMSOL text files with the options in the menu :guilabel:`File` > :guilabel:`Import tracks`. Loading of large files can take while; DiffusionLab will output the path of the loaded file followed by ‘done’ in the Command Window.
+Tracks can be imported from DoM results tables, Localizer text files, and COMSOL text files with the options in the menu :guilabel:`File` > :guilabel:`Import tracks`. Loading of large files can take while; DiffusionLab will output the path of the loaded file followed by ‘done’ in the Command Window once the loading has been completed.
 
 In order to do quantitative (motion) analysis of the trajectories, the track settings have to be set in the `Compute properties` panel. The :guilabel:`Pixel size` is the length of a single pixel edge in nanometers, the :guilabel:`Frame time` the time between frames in seconds, and :guilabel:`Exposure time` is the time the shutter is open per frame in seconds. This assumes that the time in raw data is given in frames and the coordinates in pixels. If not, these values should be considered as a conversion factor from the unit in the raw data to the unit given in the GUI (see Hint). The :guilabel:`Exposure time` is only used to compute the motion blur constant in the diffusion constant estimators following the Berglund camera-based single-particle tracking model. [#f1]_ It can be set to zero to not include motion blur in the analysis.
 
@@ -31,7 +31,7 @@ Segmentation
 
 The :ref:`standard track properties <ch-trackProperties-standard>` of the loaded tracks are computed with :guilabel:`Compute track properties`. Additionally, the mean squared displacement (MSD) values are computed for plotting and fitting.
 
-The Population is a group of tracks with – preferably – similar diffusion characteristics. Populations can be managed in the `Segmentation` panel. The current Population can be selected in the first dropdown menu :guilabel:`Population #` in the `Selection` panel. Each Population has a number of Tracks, which can be selected based on the Track ID in the second dropdown menu :guilabel:`Track #`. The computed track properties can be selected in the bottom two menu’s, which are respectively the :guilabel:`Track property 1` and :guilabel:`Track property 2`.
+The Population is a group of tracks with similar motion characteristics. Populations can be managed in the `Segmentation` panel. The current Population can be selected in the first dropdown menu :guilabel:`Population #` in the `Selection` panel. Each Population has a number of Tracks, which can be selected based on the Track ID in the second dropdown menu :guilabel:`Track #`. The computed track properties can be selected in the bottom two menu’s, which are respectively the :guilabel:`Track property 1` and :guilabel:`Track property 2`.
 
 Property table
 ++++++++++++++++
@@ -39,7 +39,7 @@ Property table
 The properties of the individual tracks are displayed in the track table. The population and track property of interest can be set using :guilabel:`Population #` and :guilabel:`Track property 1`, respectively. All tracks within a population have a unique track ID, which can be used to find the track back in the :guilabel:`Plot tracks` using the :guilabel:`Label` option. The tracks are sorted from low to high value of their current property. Invalid values are indicated by NaN.
 
 .. warning::
-	The track IDs change when tracks are added or removed from a population and do not remain the constant throughout the analysis.
+	The track IDs change when tracks are added or removed from a population and do not remain constant after these operations.
 
 Manual Segmentation 
 ++++++++++++++++++++
@@ -87,7 +87,7 @@ The classification and track properties of the tracks in the training set can be
 * Nearest neighbor classifiers
 * Ensemble classifiers
 
-Classification Learner can also be opened from the DiffusionLab main window via :guilabel:`Classification` > :guilabel:`MATLAB Classification Learner`. The trained model in Classification Learner can be `exported <https://nl.mathworks.com/help/stats/export-classification-model-for-use-with-new-data.html>`_ via :guilabel:`export model` or :guilabel:`export compact model`. The current population in DiffusionLab can be segmented with this save model via :guilabel:`Classification` > :guilabel:`Segment with model CL`.
+Classification Learner can also be opened from the DiffusionLab main window via :guilabel:`Classification` > :guilabel:`MATLAB Classification Learner`. The trained model in Classification Learner can be `exported <https://nl.mathworks.com/help/stats/export-classification-model-for-use-with-new-data.html>`_ via :guilabel:`export model` or :guilabel:`export compact model`. The current population in DiffusionLab can be segmented with this saved model via :guilabel:`Classification` > :guilabel:`Segment with model CL`.
 
 Visualization
 ---------------
@@ -129,6 +129,6 @@ Debugging
 
 For troubleshooting, debug mode can be toggled on in :guilabel:`Help` > :guilabel:`Debug`, which provides extensive error messages and the lines of the where the error occurs. During normal usage, this box should be toggled off. When reporting errors, always make sure the error message with debug mode on is provided.
 
-.. rubric:: References
+.. rubric:: References (in footnotes)
 
 .. [#f1] Berglund, A.J., 2010. Statistics of camera-based single-particle tracking. Physical Review E, 82(1), p.011917

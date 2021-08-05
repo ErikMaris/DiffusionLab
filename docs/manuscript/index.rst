@@ -22,6 +22,7 @@ Usage
 .. toctree::
    :maxdepth: 2
    
+   usage/workflow
    usage/exportTo
    usage/GUI
    
