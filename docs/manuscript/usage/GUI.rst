@@ -120,7 +120,7 @@ The plots can be saved in a wide range of pixel and vector images via :guilabel:
 
 .. _fig-GUI_figures:
 
-.. figure:: GUI_figures.png
+.. figure:: GUI_figures.PNG
 
    Overview of the graphical user interface (GUI) for figure export.
    
