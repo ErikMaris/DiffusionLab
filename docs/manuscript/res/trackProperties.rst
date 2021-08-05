@@ -166,5 +166,5 @@ The standard track properties categorized by their main descriptors are given in
 .. rubric:: References (in footnotes)
 
 .. [#f1] Hendriks, F.C., Meirer, F., Kubarev, A.V., Ristanović, Z., Roeffaers, M.B., Vogt, E.T., Bruijnincx, P.C. and Weckhuysen, B.M., 2017. Single-molecule fluorescence microscopy reveals local diffusion coefficients in the pore network of an individual catalyst particle. Journal of the American Chemical Society, 139, pp.13632-13635.
-.. [f#2] Same as ref. 1.
+.. [#f2] Same as ref. 1.
 .. [#f3] Vestergaard, C.L., Blainey, P.C. and Flyvbjerg, H., 2014. Optimal estimation of diffusion coefficients from single-particle trajectories. Physical Review E, 89, p.022726.

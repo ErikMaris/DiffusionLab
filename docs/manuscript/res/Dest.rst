@@ -1,6 +1,6 @@
 .. _ch-diffusionEstimators:
 
-Diffusion estimators
+Diffusion Estimators
 ------------------------
 
 In this resource section, the available diffusion estimators are documented.
