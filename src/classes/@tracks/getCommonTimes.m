@@ -12,7 +12,8 @@ function time = getCommonTimes(obj)
 % -                         HISTORY                           -
 % -------------------------------------------------------------
 % 
-% Adapted from msdanalyzer https://tinevez.github.io/msdanalyzer/
+% Adapted from msdanalyzer https://tinevez.github.io/msdanalyzer/ with
+% permission.
 % (C) 2007 Jean-Yves Tinevez
 % 
 % -------------------------------------------------------------

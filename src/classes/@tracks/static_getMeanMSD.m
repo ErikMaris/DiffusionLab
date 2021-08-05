@@ -34,7 +34,8 @@ function msmsd = static_getMeanMSD(MSD)
 % -                         HISTORY                           -
 % -------------------------------------------------------------
 % 
-% Reproduced from msdanalyzer https://tinevez.github.io/msdanalyzer/
+% Reproduced from msdanalyzer https://tinevez.github.io/msdanalyzer/ with
+% permission.
 % (C) 2014 Jean-Yves Tinevez
 % 
 % -------------------------------------------------------------

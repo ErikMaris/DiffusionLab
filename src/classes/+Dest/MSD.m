@@ -7,7 +7,7 @@ classdef MSD < Dest.DEstimator
     % coefficient estimation in single-particle tracking
     
     % ---------------------------------------------------------------------
-    % Copyright (C) 2019 J.J. Erik Maris
+    % Copyright (C) 2021 J.J. Erik Maris
     % Inorganic Chemistry & Catalysis, Utrecht University
     % 
     % This program is free software: you can redistribute it and/or modify
