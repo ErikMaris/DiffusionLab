@@ -5,7 +5,7 @@ Assuming that DiffusionLab has been installed, the graphical user interface (GUI
 
 .. _fig-GUI_main:
 
-.. figure:: GUI_main.png
+.. figure:: GUI_main.PNG
 
    Overview of the graphical user interface (GUI) of DiffusionLab
 
