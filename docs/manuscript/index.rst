@@ -5,13 +5,14 @@ DiffusionLab is software designed to extract valuable information about the moti
 
 :Version: |version|
 
-Getting Started
+General information
 ------------------
 
 .. toctree::
    :maxdepth: 2
    
-   gettingStarted/introduction
+   gettingStarted/license
+   gettingStarted/requirements
    gettingStarted/installation
    gettingStarted/workflow
 

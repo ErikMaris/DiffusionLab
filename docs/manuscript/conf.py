@@ -22,7 +22,7 @@ import sphinx_rtd_theme
 project = 'DiffusionLab'
 copyright = '2021, J.J. Erik Maris'
 author = 'J.J. Erik Maris'
-version = '0.99'
+version = '1.0.0'
 
 
 # -- General configuration ---------------------------------------------------
