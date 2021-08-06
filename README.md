@@ -18,9 +18,27 @@ When running from the command line, please make sure that the following reposito
 
 ## Demo data
 
-The trajectories from *Maris, J.J.E. et al (in preparation) 2021* are available to test the software installation. The trajectories are available in  the folder *data/processed/DiffusionLab_manuscript/* with the name *example_1-2_tracks_sig2_SNR3_FP1_BG2_PJ20.csv* and a training set for the Classification Trainer (for DiffusionLab) can be found in the same folder with the name *1-training.mat*. The trajectories in *example_1-1_trainingset_tracks_sig2_SNR3_FP1_BG2_PJ15.csv* were used to construct the training set.
+The trajectories from *Maris, J.J.E. et al (in preparation) 2021* are available to test the software installation. The trajectories are available in  the folder 
+```
+data/processed/DiffusionLab_manuscript/
+```
+with the name 
+```example_1-2_tracks_sig2_SNR3_FP1_BG2_PJ20.csv
+```
+and a training set for the Classification Trainer (for DiffusionLab) can be found in the same folder with the name 
+```
+1-training.mat
+```
+. The trajectories in 
+```
+example_1-1_trainingset_tracks_sig2_SNR3_FP1_BG2_PJ15.csv
+```
+were used to construct the training set.
 
-Please open the DiffusionLab App and load *example_1-2_tracks_sig2_SNR3_FP1_BG2_PJ20.csv* in DiffusionLab via *File* > *Import tracks* > *DoM* results in 10600 imported trajectories. First set the *Pixel size (nm)* to 64, *Frame time (s)* 0.050, and *Exposure time (s)* to 0. The shortest trajectories should be removed first to facilitate further analysis. Select *Number of Points* as first track property (below *Track 1*) and set a *Property threshold* of 5. Press *Use property 1 as filter* to select the threshold and *Apply filter to all tracks* to execute. Delete the first population containing the tracks with fewer than 5 points by pressing *Delete current population*. Now, the data set can be visualized, for instance by plotting the tracks using *Plot tracks* or their mean squared displacement curves with *Plot MSD all tracks*.
+Please open the DiffusionLab App and load 
+```
+example_1-2_tracks_sig2_SNR3_FP1_BG2_PJ20.csv
+``` in DiffusionLab via *File* > *Import tracks* > *DoM* results in 10600 imported trajectories. First set the *Pixel size (nm)* to 64, *Frame time (s)* 0.050, and *Exposure time (s)* to 0. The shortest trajectories should be removed first to facilitate further analysis. Select *Number of Points* as first track property (below *Track 1*) and set a *Property threshold* of 5. Press *Use property 1 as filter* to select the threshold and *Apply filter to all tracks* to execute. Delete the first population containing the tracks with fewer than 5 points by pressing *Delete current population*. Now, the data set can be visualized, for instance by plotting the tracks using *Plot tracks* or their mean squared displacement curves with *Plot MSD all tracks*.
 
 For more information about the usage of the DiffusionLab graphical user interface please consult the [documentation](https://diffusionlab.readthedocs.io/en/latest/).
 
