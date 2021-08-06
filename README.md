@@ -23,7 +23,8 @@ The trajectories from *Maris, J.J.E. et al (in preparation) 2021* are available 
 data/processed/DiffusionLab_manuscript/
 ```
 with the name 
-```example_1-2_tracks_sig2_SNR3_FP1_BG2_PJ20.csv
+```
+example_1-2_tracks_sig2_SNR3_FP1_BG2_PJ20.csv
 ```
 and a training set for the Classification Trainer (for DiffusionLab) can be found in the same folder with the name 
 ```
