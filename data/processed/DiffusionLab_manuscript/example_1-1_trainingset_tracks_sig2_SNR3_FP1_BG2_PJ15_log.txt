@@ -1,0 +1,16 @@
+ --- DoM plugin version 1.2.0 --- 
+Detection parameters
+Image title: "example_hybrid_1-1.tif"
+Image pixel size: 64.00 nm
+Detection SD of PSF: 2.00 pixels (128.00 nm)
+Kernel size: (detection) 7 pixels, (fitting) 13 pixels
+Detection time: 13.03 s
+Fitting time: 2.51 s
+Total time: 15.53 s
+Total number of localizations: 28602
+ --- DoM plugin version 1.2.0 --- 
+Linking parameters
+For linking use all particles
+Max distance to search over one frame: 15 pixels
+Measure distance from next detected position
+Maximum linking gap 2 frames
