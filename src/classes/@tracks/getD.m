@@ -48,25 +48,18 @@ end
 [uF,uL] = obj.getUnitFactor('pixelsize.^2/dt');
 switch type
     case 'tracks'
-        if isfield(obj.Dest.derivedVals,'D')
-            out = obj.Dest.derivedVals.D.*uF;
+        if isfield(obj.Dest.results,'D')
+            out = obj.Dest.results.D.*uF;
         else
             error('tracks:getD:noD',...
                 'Estimator does not compute diffusion constant.')
         end
     case 'mean'
-        if isfield(obj.Dest.derivedVals,'mD')
-            out = obj.Dest.derivedVals.mD*uF;
+        if isfield(obj.Dest.mResults,'D')
+            out = obj.Dest.mResults.D*uF;
         else
             error('tracks:getD:nomD',...
                 'Estimator does not compute mean diffusion constant.')
-        end
-    case 'bootstrap'
-        if isfield(obj.Dest.derivedVals,'bD')
-            out = obj.Dest.derivedVals.bD*uF;
-        else
-            error('tracks:getD:nobD',...
-                'Estimator does not compute bootstrapped diffusion constant.')
         end
     otherwise
         error('tracks:getD:unrecognizedType',...

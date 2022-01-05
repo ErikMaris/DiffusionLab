@@ -1,0 +1,153 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="2898735760" file="C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\GUI\DiffusionLab.prj" location="C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\GUI" name="DiffusionLab" target="target.mlapps" target-name="Package App">
+    <param.appname>DiffusionLab</param.appname>
+    <param.authnamewatermark>J.J. Erik Maris &amp; F. Meirer</param.authnamewatermark>
+    <param.email>j.j.e.maris@uu.nl</param.email>
+    <param.company>Utrecht University</param.company>
+    <param.icon>${PROJECT_ROOT}\DiffusionLab_resources\icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\DiffusionLab_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\DiffusionLab_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\DiffusionLab_resources\icon_16.png</file>
+    </param.icons>
+    <param.summary>Software package for single-fluorophore trajectory analysis</param.summary>
+    <param.description />
+    <param.screenshot>C:\Users\3971627\AppData\Local\Temp\tpad9a942c_5c9c_4300_8bee_c5fe3e00e9e1.png</param.screenshot>
+    <param.version>1.0.0</param.version>
+    <param.products.name>
+      <item>MATLAB</item>
+      <item>Curve Fitting Toolbox</item>
+      <item>Image Processing Toolbox</item>
+    </param.products.name>
+    <param.products.id>
+      <item>1</item>
+      <item>60</item>
+      <item>17</item>
+    </param.products.id>
+    <param.products.version>
+      <item>9.7</item>
+      <item>3.5.10</item>
+      <item>11.0</item>
+    </param.products.version>
+    <param.platforms />
+    <param.output>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src</param.output>
+    <param.guid>b06c6364-d7f4-4878-a84a-a5d6adefac10</param.guid>
+    <unset>
+      <param.description />
+      <param.platforms />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\DiffusionLab_App.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\bin\external\@plotProps\plotProps.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\bin\external\@printFig\printFig.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\bin\external\@unitProps\unitProps.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@classHandling\classHandling.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@segTree\segTree.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\addTrack.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\computeDiffusion.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\computeDrift.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\computeFeatures.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\computeIntTraceFromMovie.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\computeMSD.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\computeOnTrace.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\computeTraceBlinkingGap.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\errorShade.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\exportMeanMSD.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\exportMSD.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\exportPropertyTable.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getAllDelays.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getCommonTimes.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getD.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getDestNames.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getdR2.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getFeature.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getFeatureUnitConv.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getHullPoints.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getLocalizations.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getLocErrFromImmobile.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getLocVar.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getMeanMSD.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getOnOffFromOnTraceShort.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getOnTraceFromShort.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getR2CPD.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getShortFromOnTrace.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getSlicedTracks.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\getTrackOverlap.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\importCOMSOL.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\importDoM.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\importLocalizer.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\importTrackpy.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\merge.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\minboundcircle.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotBoxProp.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotDisplacements.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotDistOnOff.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotdR.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotdR2.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotdR2CPD.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotEventsHist.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotEventsTime.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotHexDiag.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotHistProp.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotIntTrace.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotMeanMSD.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotMSD.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotNewTracksHist.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotNewTracksTime.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotOnTrace.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotPCAScorePlot.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotPropCorrelation.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotPtrack.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotTracks.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\plotVoronoiDiag.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\reportDest.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\rotateTracks.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\segment.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\segmentCLmodel.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\sortFeatureTable.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\static_getdR2.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\static_getMeanMSD.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\static_getMSD.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\thresholdIntTrace.m</file>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\@tracks\tracks.m</file>
+    </fileset.depfun>
+    <fileset.resources>
+      <file>C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src\classes\+Dest</file>
+      <file>${PROJECT_ROOT}\ClassificationTrainer_App.mlapp</file>
+      <file>${PROJECT_ROOT}\ExportFigures_App.mlapp</file>
+    </fileset.resources>
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab" name="src" optional="false">C:\Users\3971627\OneDrive - Universiteit Utrecht\PhD\software\Git MATLAB DiffusionLab\src</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2019b</root>
+      <toolboxes>
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
