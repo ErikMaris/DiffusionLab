@@ -1,0 +1,12 @@
+# exclude compiled binaries and external models
+/bin
+
+# exclude data from source control by default
+/data/temp
+
+# exclude private source code
+/src/private
+
+# exclude colormaps, but keep folder
+src/colormaps/*
+!src/colormaps/.gitkeep 
