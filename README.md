@@ -1,7 +1,7 @@
 # DiffusionLab
 Software package for single-fluorophore trajectory analysis.
 
-This code was inspired by [MSD analyzer]{https://tinevez.github.io/msdanalyzer/}.
+This code was inspired by [MSD analyzer](https://tinevez.github.io/msdanalyzer/).
 
 Link to documentation: https://diffusionlab.readthedocs.io/en/latest/.
 
