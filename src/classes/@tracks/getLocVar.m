@@ -10,7 +10,7 @@ function varargout = getLocVar(obj,type)
 % 
 % varargout = getLocVar(obj,type)
 %   type / char: 'tracks' outputs per track, 'mean' for the mean of the 
-%    population, and 'bootstrap' for the bootstrapped population.
+%    and population for the bootstrapped population.
 
 % -------------------------------------------------------------
 % -                         HISTORY                           -
@@ -49,25 +49,18 @@ end
 
 switch type
     case 'tracks'
-        if isfield(obj.Dest.derivedVals,'locVar')
-            out = obj.Dest.derivedVals.locVar.*uF;
+        if isfield(obj.Dest.results,'locVar')
+            out = obj.Dest.results.locVar.*uF;
         else
             error('tracks:getLocVar:noLocVar',...
                 'Estimator does not compute localization variance.')
         end
     case 'mean'
-        if isfield(obj.Dest.derivedVals,'mLocVar')
-            out = obj.Dest.derivedVals.mLocVar*uF;
+        if isfield(obj.Dest.mResults,'locVar')
+            out = obj.Dest.mResults.locVar*uF;
         else
             error('tracks:getLocVar:nomLocVar',...
                 'Estimator does not compute mean localization variance.')
-        end
-    case 'bootstrap'
-        if isfield(obj.Dest.derivedVals,'bLocVar')
-            out = obj.Dest.derivedVals.bLocVar*uF;
-        else
-            error('tracks:getLocVar:nobLocVar',...
-                'Estimator does not compute bootstrapped localization variance.')
         end
     otherwise
         error('tracks:getLocVar:unrecognizedType',...

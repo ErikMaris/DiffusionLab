@@ -3,6 +3,8 @@ Software package for single-fluorophore trajectory analysis.
 
 Link to documentation: https://diffusionlab.readthedocs.io/en/latest/.
 
+This code was inspired by [MSD analyzer](https://tinevez.github.io/msdanalyzer/).
+
 ## Requirements
 
 Software has been written and tested in MATLAB 2019b.
