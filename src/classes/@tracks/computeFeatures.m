@@ -122,33 +122,49 @@ for ii = 1:nObj
         if ismember('nTrackPoints',do); T.nTrackPoints = obj(ii).nTrackPoints;...
                 T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'Number of Points'; end
     end
-            
+
+    
+    %% nTrackPointsAll, onFraction
+    
+    thisFeatures = {'nTrackPointsAll','onFraction'};
+    
+    if any(ismember(thisFeatures,do))
+        nTrackPointsAll  = cellfun(@(x) x(end) - x(1) + 1,obj(ii).time);
+        onFraction = obj(ii).nTrackPoints./nTrackPointsAll;
+    
+        if ismember('nTrackPointsAll',do); T.nTrackPointsAll = nTrackPointsAll;...
+                T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'Number of all points'; end
+        if ismember('onFraction',do); T.onFraction = onFraction;...
+                T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'ON-fraction'; end
+    end
+    
+    %% firstFrame
+    
+    thisFeatures = {'firstFrame'};
+    
+    if any(ismember(thisFeatures,do))
+        firstFrame = cellfun(@(x) x(1),obj(ii).time); % take first frame of appearance from frames
+    
+        if ismember('firstFrame',do); T.firstFrame = firstFrame;...
+                T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'First frame'; end
+    end
     
     %% Blinking
     
-    thisFeatures = {'nTrackPointsAll','firstFrame','onFraction','blinkingRate',...
-           'OFFON','ONOFF'};
+    thisFeatures = {'blinkingRate','OFFON','ONOFF'};
     
     if any(ismember(thisFeatures,do))
         if ~obj(ii).onTrace_valid
-            obj(ii) = obj(ii).computeOnTrace;
+            obj(ii) = obj(ii).computeOnTrace; % is slow
         end
-
+        
         % preallocation
-
-        nTrackPointsAll = zeros(obj(ii).nTracks,1);
-        firstFrame = zeros(obj(ii).nTracks,1);
-        onFraction = zeros(obj(ii).nTracks,1);
         blinkingRate = zeros(obj(ii).nTracks,1);
         OFFON = cell(obj(ii).nTracks,1);
         ONOFF = cell(obj(ii).nTracks,1);
-        nTrackPoints = obj(ii).nTrackPoints;
 
         % compute
         for jj = 1:obj(ii).nTracks
-            nTrackPointsAll(jj)  =(obj(ii).time{jj}(end) - obj(ii).time{jj}(1) + 1);
-            firstFrame(jj) = obj(ii).time{jj}(1); % take first frame of appearance from frames
-            onFraction(jj) = nTrackPoints(jj)/nTrackPointsAll(jj);
             nShort = numel(obj(ii).onTrace{jj});
             % weirdly coded - check
             if obj(ii).onTrace{jj}(1) == 0
@@ -157,6 +173,7 @@ for ii = 1:nObj
                 nShortZ = nShort;
             end
             % blinking is ON-OFF-ON
+            nTrackPointsAll  = cellfun(@(x) x(end) - x(1) + 1,obj(ii).time);
             if mod(nShort,2 == 0) % is even, ends on ON
                 blinkingRate(jj) = floor(nShortZ-1/2)/nTrackPointsAll(jj);
             else % is odd, ends on OFF
@@ -174,12 +191,6 @@ for ii = 1:nObj
         end
 
         % write to table as table
-        if ismember('nTrackPointsAll',do); T.nTrackPointsAll = nTrackPointsAll;...
-                T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'Number of all points'; end
-        if ismember('firstFrame',do); T.firstFrame = firstFrame;...
-                T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'First frame'; end
-        if ismember('onFraction',do); T.onFraction = onFraction;...
-                T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'ON-fraction'; end
         if ismember('blinkingRate',do); T.blinkingRate = blinkingRate;...
                 T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'Blinking rate'; end
         if ismember('OFFON',do); obj(ii).OFFON = OFFON; end
