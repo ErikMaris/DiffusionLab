@@ -1,5 +1,5 @@
 classdef MSD_normal < Dest.DModel
-    %NORMAL Model for normal diffusion
+    %NORMAL Model for normal diffusion. Uses motion blur.
     
     % ---------------------------------------------------------------------
     % Copyright (C) 2021 J.J. Erik Maris
