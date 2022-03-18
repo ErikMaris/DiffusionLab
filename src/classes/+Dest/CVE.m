@@ -96,10 +96,12 @@ classdef CVE < Dest.DEstimator
                     '%d objects parsed, can only process one.',numel(parent))
             end
             
+            % Based on Vestergaard PHYSICAL REVIEW E 94, 022401 (2016)
+            
             % --- compute dR2, dR and dT
             
             dR2 = cellfun(@(x) sum((x(1:end-1,:) - x(2:end,:)).^2,2),parent.coords,'UniformOutput',false); % Squared displacement 
-            dR2mp1 = cellfun(@(dR2) sqrt(dR2(1:end-1)).*sqrt(dR2(2:end)),dR2,'UniformOutput',false); % displacement
+            dR2mp1 = cellfun(@(dR2) sqrt(dR2(2:end)).*sqrt(dR2(1:end-1)),dR2,'UniformOutput',false); % displacement
             dt = cellfun(@(x) x(2:end,:) - x(1:end-1,:),parent.time,'UniformOutput',false); % delta t
             R = parent.getR;
             
@@ -108,8 +110,16 @@ classdef CVE < Dest.DEstimator
                 
                 % --- compute per track
                 
+                % Eq. 21
                 D = cellfun(@(dR2,dR2mp1,dt) mean(dR2)/(2*parent.nDim*mean(dt)) + mean(dR2mp1)/(parent.nDim*mean(dt)),dR2,dR2mp1,dt);
+                
+                % Vestergaard PHYSICAL REVIEW E 89, 022726 (2014) Eq. 15
+                % derived analogously as Eq. 21 in Vestergaard PHYSICAL 
+                % REVIEW E 94, 022401 (2016) from Eq. 14 in Vestergaard 
+                % PHYSICAL REVIEW E 89, 022726 (2014)
                 locVar = cellfun(@(dR2,dR2mp1) R*mean(dR2)/parent.nDim + (2*R-1)*mean(dR2mp1)/parent.nDim,dR2,dR2mp1);
+                
+                % Eq. 16
                 diffusionSNR = real(sqrt(D.*parent.dt./locVar)); % definition Vestergaard
                 diffusionSNR(D < 0 | locVar < 0) = nan;
                 
@@ -117,15 +127,16 @@ classdef CVE < Dest.DEstimator
                 obj.results.Properties.VariableDescriptions = {'Diffusion constant','Localization variance','Diffusion SNR'};
                 obj.results.Properties.VariableUnits = {'pixelsize.^2/dt','pixelsize.^2',''};
             end
-
+            
+            % same as for individual trajectories, but now averaged over
+            % the whole population.
             D = mean(vertcat(dR2{:}))/(2*parent.nDim*mean(vertcat(dt{:}))) + mean(vertcat(dR2mp1{:}))/(parent.nDim*mean(vertcat(dt{:})));
             locVar = R*mean(vertcat(dR2{:}))/parent.nDim + (2*R-1)*mean(vertcat(dR2mp1{:})/parent.nDim);
-            diffusionSNR = real(sqrt(D.*parent.dt./locVar)); % definition Vestergaard
+            diffusionSNR = real(sqrt(D.*parent.dt./locVar));
             diffusionSNR(D < 0 | locVar < 0) = nan;
 
-            obj.mResults = table(D,locVar,diffusionSNR);
-            obj.mResults.Properties.VariableDescriptions = {'Diffusion constant','Localization variance','Diffusion SNR'};
-            obj.mResults.Properties.VariableUnits = {'pixelsize.^2/dt','pixelsize.^2',''};
+            obj.mResults = struct('D',D,'locVar',locVar,'diffusionSNR',diffusionSNR);
+            
 
             fprintf('Done\n')
             
