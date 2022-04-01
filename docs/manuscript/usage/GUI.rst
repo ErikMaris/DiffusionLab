@@ -33,6 +33,10 @@ The :ref:`standard track properties <ch-trackProperties-standard>` of the loaded
 
 The Population is a group of tracks with similar motion characteristics. Populations can be managed in the `Segmentation` panel. The current Population can be selected in the first dropdown menu :guilabel:`Population #` in the `Selection` panel. Each Population has a number of Tracks, which can be selected based on the Track ID in the second dropdown menu :guilabel:`Track #`. The computed track properties can be selected in the bottom two menu’s, which are respectively the :guilabel:`Track property 1` and :guilabel:`Track property 2`.
 
+Custom features
+-----------------
+Custom features can be added to DiffusionLab. Instructions to code the features can be found in a template, which can be found in src/classes/@tracks/feature_template/featureTemplate.m in the GitHub repository. One or more of these 'feature scripts' can be loaded in the DiffusionLab GUI via :guilabel:`File` > :guilabel:`Load feature script`. The selected scripts are automatically executed and the features appear in the software and can be used like any of the build-in features. These features are also automatically computed for the training set in the Classification Trainer App (see below). The features have to be removed from the loaded feature scripts list before the Classification Trainer App is opened, if they should not be computed for the training set. This can be done by opening the file selection dialog via :guilabel:`File` > :guilabel:`Load feature script` and pressing :guilabel:`Cancel`.
+
 Property table
 ++++++++++++++++
 
