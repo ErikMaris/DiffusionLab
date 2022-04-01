@@ -455,9 +455,12 @@ for ii = 1:nObj
     
     waitbar(1/nObj+(ii-1)/nObj,wb,'Computing custom features')
     
-    
-    
-    if ~
+    % run .m files containing the features
+    if ~isempty(filepathFeatures)
+        for jj = 1:numel(filepathFeatures)
+            run(filepathFeatures{jj});
+        end
+    end
     
     %% Save
     
