@@ -6,14 +6,7 @@ function obj = computeFeatures(obj,preserveFlag,featureNames,filepathFeatures)
 %   computes features in the feature table. If preserveFlag is true, do not
 %   remove features that are not specified in featureNames. featureNames is
 %   a cell array with strings containing the features to be computed.
-%   Please note that the variable name as how they appear in the feature
-%   table have to be used, so 'nTrackPoints' instead of 'Number of points'.
-%   filepathFeatures is a string or cell array with strings containing the
-%   path(s) to the feature scripts. The feature script has to made
-%   following the template:
-%   src/classes/@tracks/feature_template/featureTemplate.m
-%       
-%   A non-exhaustive list of features computed in this function:
+%   Please note that the variable name as how they appear in the 
 %       'firstFrame': first frame in which track appears
 %       'firstFrameCoords': coordinates of the first frame of a track
 %       'offFrames': frame numbers when no particle is detected during the
