@@ -344,7 +344,7 @@ for ii = 1:nObj
     waitbar(0.9/nObj+(ii-1)/nObj,wb,waitstr)
     %% PCA
     
-    thisFeatures = {'EVec1','EVec2','CVE1','CVE2','EV1angle'};
+    thisFeatures = {'EVec1','EVec2','CVE1','CVE2','wEV1','EV1angle'};
         
     if any(ismember(thisFeatures,do))
         
