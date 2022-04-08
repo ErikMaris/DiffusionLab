@@ -1,5 +1,9 @@
-function exportMeanMSD(obj,filepath,indices)
-% exportMeanMSD(obj,filepath, indices)
+function exportPopulationClassification(obj,filepath)
+% exportPopulationClassification(obj,filepath) exports the datasetID,
+% importID (which is the track number in the import file) and the
+% population.
+%
+% Supported file extensions are: .txt, .dat, .csv, .xls, .xlsm, .xlsx
 
 % -------------------------------------------------------------
 % -                         HISTORY                           -
@@ -7,7 +11,7 @@ function exportMeanMSD(obj,filepath,indices)
 % 
 %
 % -------------------------------------------------------------
-% Copyright (C) 2021 J.J. Erik Maris
+% Copyright (C) 2022 J.J. Erik Maris
 % Inorganic Chemistry & Catalysis, Utrecht University
 % 
 % This program is free software: you can redistribute it and/or modify
@@ -23,12 +27,8 @@ function exportMeanMSD(obj,filepath,indices)
 % You should have received a copy of the GNU General Public License
 % along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-if any(~[obj.MSD_valid])
-    error('Please compute the MSD first.')
-end
-
 [~,~,ext] = fileparts(filepath);
-if ~ismember(ext,{'.xls','.xlsm','.xlsx'}) % check for correct file format
+if ~ismember(ext,{'.txt','.dat','.csv','.xls','.xlsm','.xlsx'}) % check for correct file format
     error('File format should be either .xls, .xlsm, or .xlsx.')
 end
 
@@ -36,33 +36,28 @@ if isfile(filepath) % since the function does not clear the excel sheet before w
     error(['File ''' filepath ''' does already exist.'])
 end
 
-if nargin < 3
-    indices = [];
-end
 
 nObj = numel(obj);
 
-warning( 'off', 'MATLAB:xlswrite:AddSheet' ) ; % if multiple sheets have to be written
+% preallocate output tables
+T = cell(nObj,1);
+
 for ii = 1:nObj
-
-    [xUnitFactor,time_unit] = obj(ii).getUnitFactor('dt');
-    [yUnitFactor,msd_unit] = obj(ii).getUnitFactor('pixelsize.^2');
-
-    msmsd = obj(ii).getMeanMSD(indices);
-    
-    if isempty( msmsd ) % do not plot empty spots in MSD
-        continue
-    end
-
-    t = msmsd(:,1).*xUnitFactor;
-    m = msmsd(:,2).*yUnitFactor;
-    s = msmsd(:,3).*yUnitFactor; % standard error of the mean
-    msd_out = [NaN NaN NaN; t m s];
-    
-    writematrix(msd_out,filepath,'Sheet',['Population ' num2str(ii)]); % make file
-    writecell({['Delay time (' time_unit ')'],['MSD (' msd_unit ')'],['Standard error (' msd_unit ')']},filepath,'Sheet',['Population ' num2str(ii)],'Range','A1:C1')
-    
+    % make output table
+    T{ii} = obj(ii).fitProps(:,1:2); % datasetID, importID
+    Population = repelem(ii,obj(ii).nTracks,1); % population number
+    T{ii}.Population = Population;
 end
-warning( 'on', 'MATLAB:xlswrite:AddSheet' ) ;
+
+T = vertcat(T{:});
+T = sortrows(T,[1 2 3]); % sort rows first datasetID, importID, then population
+
+writetable(T,filepath)
+
+
+
+
+
+
 
 end

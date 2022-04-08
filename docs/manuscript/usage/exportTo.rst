@@ -3,7 +3,7 @@ Export for DiffusionLab
 
 DiffusionLab supports the import of tracks from DoM v.1.1.6, Localizer for Igor Pro, and COMSOL Multiphysics. Support requests for formats can be sent to the developers.
 
-DoM v.1.1.6
+DoM v.1.1.6-1.2.0
 ------------
 
 DoM is an ImageJ plug-in for localization and tracking of single-molecule fluorescence time lapse movies. The software is freely available `here <https://github.com/ekatrukha/DoM_Utrecht/wiki>`_. The results can be exported via the ImageJ “Results” table. The steps are the following:

@@ -289,16 +289,14 @@ fclose(f);
 % --- create object
 
 obj = tracks(time,coords,pixel_m,time_s);
+T = table(trackID,coords_err,z0,z0_err,sigma,sigma_err,...
+    sigma_err,intensity,intensity_err,corrXY,corrXY_err);
+obj.fitProps = [obj.fitProps T];
+datasetID = strings(nTracks,1);
+[~,filename,~] = fileparts(txtpath);
+datasetID(:) = filename;
+obj.fitProps.datasetID = datasetID; % overwrite datasetID with filepath
 obj.filepath = txtpath;
-obj.fitProps.coords_err = coords_err;
-obj.fitProps.z0 = z0;
-obj.fitProps.z0_err = z0_err;
-obj.fitProps.sigma = sigma;
-obj.fitProps.sigma_err = sigma_err;
-obj.fitProps.intensity = intensity;
-obj.fitProps.intensity_err = intensity_err;
-obj.fitProps.corrXY = corrXY;
-obj.fitProps.corrXY_err = corrXY_err;
 
 obj.coordsZero = 1;
 obj.dt = 1; % frame
