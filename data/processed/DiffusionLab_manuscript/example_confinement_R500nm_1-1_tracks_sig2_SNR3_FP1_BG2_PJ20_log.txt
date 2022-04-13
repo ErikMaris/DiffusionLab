@@ -1,0 +1,16 @@
+ --- DoM plugin version 1.2.0 --- 
+Detection parameters
+Image title: "example_confinement_R500nm_1-1.tif"
+Image pixel size: 64,00 nm
+Detection SD of PSF: 2,00 pixels (128,00 nm)
+Kernel size: (detection) 7 pixels, (fitting) 13 pixels
+Detection time: 67,51 s
+Fitting time: 5,02 s
+Total time: 72,54 s
+Total number of localizations: 33773
+ --- DoM plugin version 1.2.0 --- 
+Linking parameters
+For linking use all particles
+Max distance to search over one frame: 20 pixels
+Measure distance from next detected position
+Maximum linking gap 2 frames
