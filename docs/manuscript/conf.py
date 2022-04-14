@@ -20,9 +20,9 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'DiffusionLab'
-copyright = '2021, J.J. Erik Maris'
+copyright = '2021-2022, J.J. Erik Maris'
 author = 'J.J. Erik Maris'
-version = '1.0.0'
+version = '1.1.0'
 
 
 # -- General configuration ---------------------------------------------------
