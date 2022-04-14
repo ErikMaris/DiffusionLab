@@ -3,7 +3,7 @@ Software package for single-fluorophore trajectory analysis.
 
 Link to documentation: https://diffusionlab.readthedocs.io/en/latest/.
 
-This code was inspired by [@msdanalyzer](https://tinevez.github.io/msdanalyzer/) MATLAB class for mean squared displacement analysis (1.Tarantino, N. et al. TNF and IL-1 exhibit distinct ubiquitin requirements for inducing NEMO–IKK supramolecular structures. *Journal of Cell Biology* **204**, 231–245 (2014)).
+This code was inspired by the [@msdanalyzer MATLAB class](https://tinevez.github.io/msdanalyzer/) for mean squared displacement analysis (Tarantino, N. et al. TNF and IL-1 exhibit distinct ubiquitin requirements for inducing NEMO–IKK supramolecular structures. *Journal of Cell Biology* **204**, 231–245 (2014)).
 
 
 ## Requirements
