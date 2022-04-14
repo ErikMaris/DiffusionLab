@@ -33,6 +33,10 @@ The :ref:`standard track properties <ch-trackProperties-standard>` of the loaded
 
 The Population is a group of tracks with similar motion characteristics. Populations can be managed in the `Segmentation` panel. The current Population can be selected in the first dropdown menu :guilabel:`Population #` in the `Selection` panel. Each Population has a number of Tracks, which can be selected based on the Track ID in the second dropdown menu :guilabel:`Track #`. The computed track properties can be selected in the bottom two menu’s, which are respectively the :guilabel:`Track property 1` and :guilabel:`Track property 2`.
 
+Custom features
+-----------------
+Custom features can be added to DiffusionLab. These features are coded in separate files (scripts) by the user. Instructions to code the features can be found in a template located at src/classes/@tracks/feature_template/featureTemplate.m in the GitHub repository.  One or more of these 'feature scripts' can be loaded in the DiffusionLab GUI via :guilabel:`File` > :guilabel:`Load feature script`. The selected scripts are automatically executed and the features appear in the software and can be used like any of the build-in features. These features are also automatically computed for the training set in the Classification Trainer App (see below). The features have to be removed from the loaded feature scripts list before the Classification Trainer App is opened, if they should not be computed for the training set. This can be done by opening the file selection dialog via :guilabel:`File` > :guilabel:`Load feature script` and pressing :guilabel:`Cancel`.
+
 Property table
 ++++++++++++++++
 
@@ -112,7 +116,7 @@ The diffusion constant can be computed per track, population or both, depending 
 Save & Export Results
 ----------------------
 
-A DiffusionLab session can be saved as MATLAB-file by clicking the :guilabel:`File` > :guilabel:`Save` button. The contents of the Track table can be copied to the clipboard by pressing :guilabel:`Copy table to clipboard`. This allows the user to easily transfer the computed track properties to other plotting software. All track properties can be exported via :guilabel:`File` > :guilabel:`Export` > :guilabel:`Properties to table` and saved in various formats. The tracks can be exported to the MATLAB workspace for scripting (not documented) via :guilabel:`File` > :guilabel:`Export` > :guilabel:`Tracks to workspace`.
+A DiffusionLab session can be saved as MATLAB-file by clicking the :guilabel:`File` > :guilabel:`Save` button. The contents of the Track table can be copied to the clipboard by pressing :guilabel:`Copy table to clipboard`. This allows the user to easily transfer the computed track properties to other plotting software. All track properties can be exported via :guilabel:`File` > :guilabel:`Export` > :guilabel:`Properties to table` and saved in various formats. The tracks can be exported to the MATLAB workspace for scripting (not documented) via :guilabel:`File` > :guilabel:`Export` > :guilabel:`Tracks to workspace`. Finally, the filename of the input file, trajectory number in the input file, and population can be exported via :guilabel:`File` > :guilabel:`Export` > :guilabel:`importID <-> population`. The export facilitates analysis of the classified trajectories with other tools, for instance for advanced motion analysis.
 
 All open figures apart from DiffusionLab, that is also other figures and GUI’s unrelated to DiffusionLab, will be closed via :guilabel:`File` > :guilabel:`Close all open figures`.
 

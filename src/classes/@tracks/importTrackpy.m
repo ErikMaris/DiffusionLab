@@ -100,9 +100,12 @@ end
 % --- create object
 
 obj = tracks(time,coords,pixel_m,time_s);
-trackID = (1:nTracks)';
-T = table(trackID,mass,size,ecc,signal,raw_mass,ep);
-obj.fitProps = T;
+T = table(mass,size,ecc,signal,raw_mass,ep);
+obj.fitProps = [obj.fitProps T];
+datasetID = strings(nTracks,1);
+[~,filename,~] = fileparts(csvpath);
+datasetID(:) = filename;
+obj.fitProps.datasetID = datasetID; % overwrite datasetID with filepath
 obj.filepath = csvpath;
 
 % obj.fitProps.mass = mass;

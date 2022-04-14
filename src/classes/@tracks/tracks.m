@@ -178,6 +178,13 @@ classdef tracks < classHandling & unitProps & plotProps
                 obj.coords = coords;
                 obj.time = time;
                 u = symunit;
+                
+                % --- add datasetID and trackID to fitprops
+                nTracks = size(time,1);
+                importID = (1:nTracks)';
+                datasetID = repelem(randi(99999),nTracks,1); % generate 5 digit random number as data set ID; can be overwritten by import function with file name
+                T = table(datasetID,importID);
+                obj.fitProps = T;
             end
             
             if nargin > 2

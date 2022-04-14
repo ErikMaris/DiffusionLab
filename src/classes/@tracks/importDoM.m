@@ -155,10 +155,13 @@ end
 % --- create object
 
 obj = tracks(time,coords,pixel_m,time_s);
-trackID = (1:nTracks)';
-T = table(trackID,coords_err,coords_err_nm,amp,amp_err,z0,sigma,sigma_nm,...
+T = table(coords_err,coords_err_nm,amp,amp_err,z0,sigma,sigma_nm,...
     sigma_err,sigma_err_nm,intensity,state,r2fit);
-obj.fitProps = T;
+obj.fitProps = [obj.fitProps T];
+datasetID = strings(nTracks,1);
+[~,filename,~] = fileparts(csvpath);
+datasetID(:) = filename;
+obj.fitProps.datasetID = datasetID; % overwrite datasetID with filepath
 obj.filepath = csvpath;
 
 % obj.fitProps.coords_err = coords_err;

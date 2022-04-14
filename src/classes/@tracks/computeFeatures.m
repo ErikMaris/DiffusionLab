@@ -1,5 +1,19 @@
-function obj = computeFeatures(obj,preserveFlag,featureNames)
+function obj = computeFeatures(obj,preserveFlag,featureNames,filepathFeatures)
 %COMPUTEFEATURES Computes the track features and stores them in a table
+%
+% Usage:
+%   obj = computeFeatures(obj,preserveFlag,featureNames,filepathFeatures)
+%   computes features in the feature table. If preserveFlag is true, do not
+%   remove features that are not specified in featureNames. featureNames is
+%   a cell array with strings containing the features to be computed.
+%   Please note that the variable name as how they appear in the feature
+%   table have to be used, so 'nTrackPoints' instead of 'Number of points'.
+%   filepathFeatures is a string or cell array with strings containing the
+%   path(s) to the feature scripts. The feature script has to made
+%   following the template:
+%   src/classes/@tracks/feature_template/featureTemplate.m
+%       
+%   A non-exhaustive list of features computed in this function:
 %       'firstFrame': first frame in which track appears
 %       'firstFrameCoords': coordinates of the first frame of a track
 %       'offFrames': frame numbers when no particle is detected during the
@@ -58,6 +72,15 @@ if nargin < 3
 else
     featureNamesFlag = true;
 end
+
+if nargin < 4
+    filepathFeatures = [];
+end
+
+if ischar(filepathFeatures) || isstring(filepathFeatures)
+    filepathFeatures = {filepathFeatures};
+end
+
 
 wb = waitbar(0,'Computing Features','Name','Computing all track features');
 
@@ -122,33 +145,49 @@ for ii = 1:nObj
         if ismember('nTrackPoints',do); T.nTrackPoints = obj(ii).nTrackPoints;...
                 T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'Number of Points'; end
     end
-            
+
+    
+    %% nTrackPointsAll, onFraction
+    
+    thisFeatures = {'nTrackPointsAll','onFraction'};
+    
+    if any(ismember(thisFeatures,do))
+        nTrackPointsAll  = cellfun(@(x) x(end) - x(1) + 1,obj(ii).time);
+        onFraction = obj(ii).nTrackPoints./nTrackPointsAll;
+    
+        if ismember('nTrackPointsAll',do); T.nTrackPointsAll = nTrackPointsAll;...
+                T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'Number of all points'; end
+        if ismember('onFraction',do); T.onFraction = onFraction;...
+                T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'ON-fraction'; end
+    end
+    
+    %% firstFrame
+    
+    thisFeatures = {'firstFrame'};
+    
+    if any(ismember(thisFeatures,do))
+        firstFrame = cellfun(@(x) x(1),obj(ii).time); % take first frame of appearance from frames
+    
+        if ismember('firstFrame',do); T.firstFrame = firstFrame;...
+                T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'First frame'; end
+    end
     
     %% Blinking
     
-    thisFeatures = {'nTrackPointsAll','firstFrame','onFraction','blinkingRate',...
-           'OFFON','ONOFF'};
+    thisFeatures = {'blinkingRate','OFFON','ONOFF'};
     
     if any(ismember(thisFeatures,do))
         if ~obj(ii).onTrace_valid
-            obj(ii) = obj(ii).computeOnTrace;
+            obj(ii) = obj(ii).computeOnTrace; % is slow
         end
-
+        
         % preallocation
-
-        nTrackPointsAll = zeros(obj(ii).nTracks,1);
-        firstFrame = zeros(obj(ii).nTracks,1);
-        onFraction = zeros(obj(ii).nTracks,1);
         blinkingRate = zeros(obj(ii).nTracks,1);
         OFFON = cell(obj(ii).nTracks,1);
         ONOFF = cell(obj(ii).nTracks,1);
-        nTrackPoints = obj(ii).nTrackPoints;
 
         % compute
         for jj = 1:obj(ii).nTracks
-            nTrackPointsAll(jj)  =(obj(ii).time{jj}(end) - obj(ii).time{jj}(1) + 1);
-            firstFrame(jj) = obj(ii).time{jj}(1); % take first frame of appearance from frames
-            onFraction(jj) = nTrackPoints(jj)/nTrackPointsAll(jj);
             nShort = numel(obj(ii).onTrace{jj});
             % weirdly coded - check
             if obj(ii).onTrace{jj}(1) == 0
@@ -157,6 +196,7 @@ for ii = 1:nObj
                 nShortZ = nShort;
             end
             % blinking is ON-OFF-ON
+            nTrackPointsAll  = cellfun(@(x) x(end) - x(1) + 1,obj(ii).time);
             if mod(nShort,2 == 0) % is even, ends on ON
                 blinkingRate(jj) = floor(nShortZ-1/2)/nTrackPointsAll(jj);
             else % is odd, ends on OFF
@@ -174,12 +214,6 @@ for ii = 1:nObj
         end
 
         % write to table as table
-        if ismember('nTrackPointsAll',do); T.nTrackPointsAll = nTrackPointsAll;...
-                T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'Number of all points'; end
-        if ismember('firstFrame',do); T.firstFrame = firstFrame;...
-                T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'First frame'; end
-        if ismember('onFraction',do); T.onFraction = onFraction;...
-                T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'ON-fraction'; end
         if ismember('blinkingRate',do); T.blinkingRate = blinkingRate;...
                 T.Properties.VariableUnits{end} = ''; T.Properties.VariableDescriptions{end} = 'Blinking rate'; end
         if ismember('OFFON',do); obj(ii).OFFON = OFFON; end
@@ -310,7 +344,7 @@ for ii = 1:nObj
     waitbar(0.9/nObj+(ii-1)/nObj,wb,waitstr)
     %% PCA
     
-    thisFeatures = {'EVec1','EVec2','CVE1','CVE2','EV1angle'};
+    thisFeatures = {'EVec1','EVec2','CVE1','CVE2','wEV1','EV1angle'};
         
     if any(ismember(thisFeatures,do))
         
@@ -429,6 +463,17 @@ for ii = 1:nObj
         if ismember('voronoiSA',do); T.voronoiSA = voronoiSA;...
                 T.Properties.VariableUnits{end} = 'pixelsize.^2'; T.Properties.VariableDescriptions{end} = 'Voronoi area'; end
     
+    end
+    
+    %% Compute custom features
+    
+    waitbar(1/nObj+(ii-1)/nObj,wb,'Computing custom features')
+    
+    % run .m files containing the features
+    if ~isempty(filepathFeatures)
+        for jj = 1:numel(filepathFeatures)
+            run(filepathFeatures{jj});
+        end
     end
     
     %% Save

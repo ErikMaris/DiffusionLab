@@ -1,4 +1,4 @@
-function varargout = plotdR2CPD(obj, ha, indices, delayIdx)
+function varargout = plotdR2CPD(obj, ha, indices, delayIdx, method, binning)
 % plotdR2 Plots a 1-cummulative probability function of the squared 
 % displacement per population
 % 
@@ -7,11 +7,20 @@ function varargout = plotdR2CPD(obj, ha, indices, delayIdx)
 % -                         USAGE                             -
 % -------------------------------------------------------------
 % 
-% plotSqDisp(obj, ha, indices, delayIdx, logbinFlag, normalization)
+% plotdR2CPD(obj, ha, indices, delayIdx, method, binning)
 %   obj: allows >1 objs to be parsed
 %   ha: handle to axes. If empty the current axis is taken
-%   indices: indeces of the tracks to be displayed
-%   delayIdx: the index/indices of the delay time(s) to be plotted
+%   indices: indeces of the tracks to be displayed, if empty all are taken
+%   delayIdx: the index/indices of the delay time(s) to be plotted, default
+%   only the first is taken
+%   method: method to compute CPD
+%       'ranking': displacements are ordered from low to high. No binning
+%       is done and spacing of displacements is dependent on sparsity in
+%       data set
+%       'binning': displacements are binned
+%   binning: is only applicable for the 'binnning' method. If is scalar,
+%   then it is interpreted as the number of bins, while if vector, then it
+%   is interpreted as the bin egdes. Leave epty to use defaul binning.
 %
 % h = plotdR2CPD(...) returns the handle to the line plotted.
 %
@@ -49,6 +58,14 @@ if nargin < 4 || isempty(delayIdx)
     delayIdx = 1;
 end
 
+if nargin < 5 || isempty(method)
+    method = 'ranking';
+end
+
+if nargin < 6 || isempty(binning)
+    binning = [];
+end
+
 nObj = numel(obj);
 
 if nObj > 1 && numel(delayIdx) > 1
@@ -83,11 +100,30 @@ else % plot multiple delay times; get cell with this
     nPlot = numel(delayIdx);
 end
 
-% data has already been sorted in getdR2 from low to high dR2
-% compute the cumsum...
-iCPD = cellfun(@(x) linspace(1,0,numel(x)), dR2,'UniformOutput',false);
-% ...and normalize to get the cpd. Compute the inverse cpd for plotting
-% iCPD = cellfun(@(x) 1-x./x(end), iCPD,'UniformOutput',false);
+switch method
+    case 'ranking'
+        % data has already been sorted in getdR2 from low to high dR2
+        % compute the cumsum...
+        iCPD = cellfun(@(x) linspace(1,0,numel(x)), dR2,'UniformOutput',false);
+        % ...and normalize to get the cpd. Compute the inverse cpd for plotting
+        % iCPD = cellfun(@(x) 1-x./x(end), iCPD,'UniformOutput',false);
+        X = dR2;
+    case 'binning'
+        X = cell(nObj,1);
+        iCPD = cell(nObj,1);
+        for ii = 1:nObj
+            if isempty(binning)
+                [N,Xedges] = histcounts(dR2{ii});
+            else
+                [N,Xedges] = histcounts(dR2{ii},binning);
+            end
+            N_tot = sum(N);
+            iCPD{ii} = 1-cumsum(N)./N_tot; % compute CPD
+            X{ii} = Xedges(1:end-1) + diff(Xedges)./2;
+        end
+    otherwise
+        error('Method ''%s'' is not recognised. Please use either ''ranking'' or ''binning''.',method)
+end
 
 
 hps = gobjects(nPlot,1);
@@ -110,14 +146,14 @@ for ii = 1:nPlot
     
     colors = obj(jj).getColormap(nPlot);
     LW = obj(jj).lineWidth;
-    
+
     hps(ii) = plot(ha,...
-        dR2{ii},iCPD{ii}, ...
+        X{ii},iCPD{ii}, ...
         '.', ...
         'Color', colors(ii,:), ...
         'LineWidth', LW, ...
         'DisplayName', plotName);
-
+    
     hold(ha, 'on');
 end
 

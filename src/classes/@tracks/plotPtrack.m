@@ -34,7 +34,12 @@ function varargout = plotPtrack(obj,ha,Nstep,D_mat,pixeljump_m,loc_err,dt)
 if nargin < 2 || isempty(ha)
     ha = gca;
 end
-blinking_fraction = getBlinkingFraction(obj);
+
+if isempty(obj.coords)
+    blinking_fraction = {1};
+else
+    blinking_fraction = getBlinkingFraction(obj);
+end
 
 P_mat = getWorkingRange(D_mat,Nstep,blinking_fraction{1},pixeljump_m,loc_err,dt);
 

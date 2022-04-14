@@ -25,8 +25,8 @@ classdef MSD_directed < Dest.DModel
     
     % MSD
     properties (Constant)
-        fitfunction = 'p1*x+p2 + p3*x^2';
-        lowerBounds = [-Inf -Inf 0];
+        fitfunction = 'p1*x + p2 + p3*x^2';
+        lowerBounds = [-Inf 0 0];
         upperBounds = [Inf Inf Inf];
         nCoeff = 3;
     end

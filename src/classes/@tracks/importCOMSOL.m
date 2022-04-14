@@ -63,17 +63,17 @@ function obj = importAsTracks(filepath,nDim,pixel_m,time_s,txtpath)
 %section wise export
 out = importdata(filepath);
 
-Ntracks = str2double(regexp(horzcat(out.textdata{:}), '(?<=Elements:[^0-9]*)[0-9]*\.?[0-9]+', 'match')); % find number of elements https://nl.mathworks.com/matlabcentral/answers/166837-pull-out-number-after-specific-string-in-txt-file
-Ntimesteps = numel(strfind(fileread(filepath),'x (')); % get number of time steps
-data = reshape(out.data(2*Ntracks+1:end),[Ntracks, numel(out.data(2*Ntracks+1:end))/Ntracks/Ntimesteps Ntimesteps]); % reshape
+nTracks = str2double(regexp(horzcat(out.textdata{:}), '(?<=Elements:[^0-9]*)[0-9]*\.?[0-9]+', 'match')); % find number of elements https://nl.mathworks.com/matlabcentral/answers/166837-pull-out-number-after-specific-string-in-txt-file
+nTimesteps = numel(strfind(fileread(filepath),'x (')); % get number of time steps
+data = reshape(out.data(2*nTracks+1:end),[nTracks, numel(out.data(2*nTracks+1:end))/nTracks/nTimesteps nTimesteps]); % reshape
 data = permute(data,[3 2 1]); % [timesteps column tracks] column  = [x y z R rho]
 
 coords = squeeze(num2cell(data(:,1:nDim,:),[1 2])); % put coords in cell
 
-time = cell(Ntracks,1); % create time cell array
-time(:) = {(1:Ntimesteps)'};
+time = cell(nTracks,1); % create time cell array
+time(:) = {(1:nTimesteps)'};
 
-for ii = 1:Ntracks % clear nan
+for ii = 1:nTracks % clear nan
     clear = any(isnan(coords{ii}),2);
     coords{ii}(clear,:) = [];
     time{ii}(clear) = [];
@@ -82,10 +82,12 @@ end
 % --- create object
 
 obj = tracks(time,coords,pixel_m,time_s);
+[~,filename,~] = fileparts(txtpath);
+datasetID(:) = filename;
+obj.fitProps.datasetID = datasetID; % overwrite datasetID with filepath
 obj.filepath = txtpath;
 
 obj.coordsZero = 0;
 obj.dt = 1; % frame
-
 
 end

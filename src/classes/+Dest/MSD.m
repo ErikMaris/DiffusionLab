@@ -355,7 +355,7 @@ classdef MSD < Dest.DEstimator
             t = msd_spot(:,1).*xUnitFactor;
             m = msd_spot(:,2).*yUnitFactor;
 
-            X = linspace(0,max(msd_spot(:,1)),100);
+            X = linspace(0,max(msd_spot(:,1)),1000);
             Y = feval(obj.fit_obj{index},X).*yUnitFactor;
             X = X.*xUnitFactor;
             % MSDfun(X,obj.coeffvals(index,1),obj.coeffvals(index,2))
@@ -443,7 +443,7 @@ classdef MSD < Dest.DEstimator
             xlims = ha.XLim;
             
 %             MSDfun = @(X,a,b) X.*a.*(yUnitFactor./xUnitFactor) +b.*yUnitFactor;
-            X = linspace(0,xlims(2)/xUnitFactor,100); % do feval in reduced units
+            X = linspace(0,xlims(2)/xUnitFactor,1000); % do feval in reduced units
             Y = feval(obj.mFit_obj,X).*yUnitFactor;
             X = X.*xUnitFactor;
             

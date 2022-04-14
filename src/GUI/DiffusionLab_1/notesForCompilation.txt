@@ -1,0 +1,5 @@
+1) Make sure the folders in bin/external are manually added
+2) Stop sync folders with cloud
+3) Use matlabFunction to create a function handle to symbolic expressions
+
+- Revise unitProps to work in compiled code. In 2021b, symunits are not suppored, only symbolic expressions: https://nl.mathworks.com/products/compiler/compiler_support.html

@@ -1,5 +1,5 @@
 function exportMeanMSD(obj,filepath,indices)
-% exportMeanMSD(obj,filepath)
+% exportMeanMSD(obj,filepath, indices)
 
 % -------------------------------------------------------------
 % -                         HISTORY                           -
