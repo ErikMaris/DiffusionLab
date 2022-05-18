@@ -29,6 +29,8 @@ Number of points
 
 **Units:** -.
 
+**Supported dimensions:** 2/3.
+
 Length
 ++++++++++++++++++++++
 
@@ -41,6 +43,8 @@ Length
 
 **Units:** length.
 
+**Supported dimensions:** 2/3.
+
 MinBoundCircleRadius
 ++++++++++++++++++++++
 
@@ -51,6 +55,8 @@ MinBoundCircleRadius
 * spatial extension of localization coordinates
 
 **Units:** length.
+
+**Supported dimensions:** 2/(3 is converted to XY plane).
 
 
 MBC minus CoM
@@ -64,6 +70,8 @@ MBC minus CoM
 
 **Units:** -.
 
+**Supported dimensions:** 2/(3 is converted to XY plane).
+
 
 Entropy
 ++++++++++++++++++++++
@@ -76,6 +84,7 @@ Entropy
 
 **Units:** -.
 
+**Supported dimensions:** 2/(3 is converted to XY plane).
 
 Tortuosity
 ++++++++++++++++++++++
@@ -88,6 +97,8 @@ Tortuosity
 
 **Units:** -.
 
+**Supported dimensions:** 2/3.
+
 Elongation
 ++++++++++++++++++++++
 
@@ -99,6 +110,8 @@ Elongation
 
 **Units:** -.
 
+**Supported dimensions:** 2/(3 is converted to XY plane).
+
 Elongation angle
 ++++++++++++++++++++++
 
@@ -109,6 +122,8 @@ Elongation angle
 * Direction of localizations
 
 **Units:** -.
+
+**Supported dimensions:** 2/(3 is converted to XY plane).
 
 Other Track Properties
 ---------------------------
@@ -128,8 +143,9 @@ Localization error
 
 **Description:** imprecision in the localization. The deviation of a localization  estimate from its true position is ideally normally distributed in one dimension. The localization error is defined as the standard deviation of this normal distribution.
 
-
 **Units:** length.
+
+**Supported dimensions:** 2/3.
 
 Diffusion SNR
 ++++++++++++++++++++++
@@ -142,6 +158,7 @@ Diffusion SNR
 
 **Units:** -.
 
+**Supported dimensions:** 2/3.
 
 Underlying Descriptors
 ----------------------------
