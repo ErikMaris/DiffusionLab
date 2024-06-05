@@ -5,6 +5,7 @@ Link to documentation: https://diffusionlab.readthedocs.io/en/latest/.
 
 This code was inspired by the [@msdanalyzer MATLAB class](https://tinevez.github.io/msdanalyzer/) for mean squared displacement analysis (Tarantino, N. et al. TNF and IL-1 exhibit distinct ubiquitin requirements for inducing NEMO–IKK supramolecular structures. *Journal of Cell Biology* **204**, 231–245 (2014)).
 
+This code was published in [Maris, J. J. E., Rabouw, F. T., Weckhuysen, B. M. & Meirer, F. Classification-based motion analysis of single-molecule trajectories using DiffusionLab. Sci. Rep. 12, 9595 (2022)](https://doi.org/10.1038/s41598-022-13446-0). The raw and processed data sets used in the publication can be found [in this repository](https://doi.org/10.24416/UU01-6BONHT).
 
 ## Requirements
 
@@ -21,7 +22,7 @@ When running from the command line, please make sure that the following reposito
 
 ## Demo data
 
-The trajectories from *Maris, J.J.E. et al (in preparation) 2022* are available to test the software installation. The trajectories are available in  the folder 
+The trajectories from *Maris, J. J. E., Rabouw, F. T., Weckhuysen, B. M. & Meirer, F. Classification-based motion analysis of single-molecule trajectories using DiffusionLab. Sci. Rep. 12, 9595 (2022)* are available to test the software installation.  The trajectories are available in  the folder 
 ```
 data/processed/DiffusionLab_manuscript/
 ```
